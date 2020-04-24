@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="637377bf-5be0-4bd6-a201-e9fd0726c51c" name="Default Changelist" comment="CYH首次提交">
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daocyh/Cyh.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/Lj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daozxz/Zxz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/resources/mapper/mappercyh/Cyh.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/resources/mapper/mapperlj/Lj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/resources/mapper/mapperzxz/Zxz.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicecyh/Cyh.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/Lj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicezxz/Zxz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImplcyh/Cyh.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImpllj/Lj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImplzxz/Zxz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/java/com/daji/controllercyh/Cyh.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/java/com/daji/controllerlj/Lj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/java/com/daji/controllerzxz/Zxz.java" afterDir="false" />
+    <list default="true" id="637377bf-5be0-4bd6-a201-e9fd0726c51c" name="Default Changelist" comment="ZXZ首次提交">
+      <change afterPath="$PROJECT_DIR$/.idea/pregnancytest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojozxz/Zxz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pregnancytest-service/pregnancytest-service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pregnancytest-web/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-web/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +19,6 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Xml" />
       </list>
     </option>
   </component>
@@ -66,7 +55,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/孕检系统/长沙大计-孕前优生检查系统/程序代码/孕前优生检查系统项目/examines-test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojozxz" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -76,24 +65,36 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\PC\IdeaProjects\pregnancytest\pregnancytest-dao\src\main\resources\mapper" />
-      <recent name="C:\Users\PC\IdeaProjects\pregnancytest\pregnancytest-web\src\main\webapp" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProjects\pregnancytest\pregnancytest-api\src\main\java\com\daji\pojozxz" />
+      <recent name="C:\Users\PC\IdeaProjects\pregnancytest\pregnancytest-dao\src\main\resources" />
+      <recent name="C:\Users\PC\IdeaProjects\pregnancytest\pregnancytest-api\src\main\java\com\daji" />
+      <recent name="C:\Users\PC\IdeaProjects\pregnancytest\pregnancytest-web\src\main\resources\templates" />
+      <recent name="C:\Users\PC\IdeaProjects\pregnancytest\pregnancytest-dao\src\main" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.daji.servicecyh" />
       <recent name="com.daji.dao" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\PC\IdeaProjects\pregnancytest\pregnancytest-dao\src\main\resources" />
-      <recent name="C:\Users\PC\IdeaProjects\pregnancytest\pregnancytest-api\src\main\java\com\daji" />
-      <recent name="C:\Users\PC\IdeaProjects\pregnancytest\pregnancytest-web\src\main\resources\templates" />
-      <recent name="C:\Users\PC\IdeaProjects\pregnancytest\pregnancytest-dao\src\main" />
-      <recent name="C:\Users\PC\IdeaProjects\pregnancytest\pregnancytest-web\src\main\resources\static" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\IdeaProjects\pregnancytest\pregnancytest-dao\src\main\resources\mapper" />
+      <recent name="C:\Users\PC\IdeaProjects\pregnancytest\pregnancytest-web\src\main\webapp" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.PregnancytestWebApplication">
     <configuration name="PregnancytestDaoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -122,16 +123,27 @@
       <option name="presentableId" value="Default" />
       <updated>1587707944407</updated>
       <workItem from="1587707948158" duration="12905000" />
-      <workItem from="1587729277140" duration="3083000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="CYH首次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="CYH首次提交" />
+    <MESSAGE value="ZXZ首次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="ZXZ首次提交" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="22" key="#Project_Structure" timestamp="1587718312200">
@@ -146,10 +158,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587726800384" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1587730732935">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1587722252758">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587730732935" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1587722252758" />
     <state width="1323" height="213" key="GridCell.Tab.0.bottom" timestamp="1587726800857">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -182,14 +194,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="213" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1587726800858" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1587732612366">
+    <state x="184" y="6" key="SettingsEditor" timestamp="1587707979891">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587732612366" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1587729594576">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1587729594576" />
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1587707979891" />
     <state x="363" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1587729377620">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -202,5 +210,16 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1587708840567" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pregnancytest-web/src/main/java/com/daji/PregnancytestWebApplication.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
