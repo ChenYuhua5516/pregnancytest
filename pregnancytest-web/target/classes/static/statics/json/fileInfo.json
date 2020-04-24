@@ -1,0 +1,115 @@
+[
+  {
+    "title":"信息查询",
+    "href":"",
+    "children":[
+      {
+        "title":"基础信息查询",
+        "href":"QueryBasicInformationFile"
+      },
+      {
+        "title":"未填信息查询I",
+        "href":"Unfilledquery1"
+      }
+    ]
+  },
+  {
+    "title":"基础档案信息",
+    "href":"",
+    "children":[
+      {
+        "title":"新建档案",
+        "href":"addNewFile"
+      },
+      {
+        "title":"知情同意书",
+        "href":"/examines/enterIntoSignature.action"
+      },
+      {
+        "title":"知情告知书",
+        "href":"/examines/InformedConsent.action"
+      }
+    ]
+  },
+  {
+    "title":"妻子信息",
+    "href":"",
+    "children":[ 
+      {
+        "title":"一般情况",
+        "href":"nvselectMInfoById.action"
+      },
+      {
+        "title":"体格检查",
+        "href":"check"
+      },
+      {
+        "title":"临床开单",
+        "href":"clinic"
+      },
+      {
+        "title":"临床检验",
+        "href":"wLcjy"
+      },
+      {
+        "title":"化验结果明细",
+        "href":"resultman"
+      }
+    ]
+  },
+  {
+  "title":"丈夫信息",
+  "href":"",
+  "children":[
+    {
+      "title":"一般情况",
+      "href":"selectMInfoById.action"
+    },
+    {
+      "title":"体格检查",
+      "href":"checkman"
+    },
+    {
+      "title":"临床开单",
+      "href":"clinicman"
+    },
+    {
+      "title":"临床检验",
+      "href":"nLcjy"
+    },
+    {
+      "title":"化验结果明细",
+      "href":"resultman"
+    }
+  ]
+  },
+  {
+    "title": "评估建议及其他",
+    "href": "",
+    "children": [
+      {
+        "title": "早孕随访记录表",
+        "href": "follow"
+      },
+      {
+        "title": "妊娠结局记录表",
+        "href": "selectMRenShenJieJu.action"
+      },
+      {
+        "title": "出生缺陷儿登记",
+        "href": "selectMchuShengQueXian.action"
+      }
+    ]
+  },
+  {
+    "title":"打印服务",
+    "href":"",
+    "children":[
+      
+      {
+        "title":"打印预览-完整档案",
+        "href":"nvYiBanQingKuangServicePrints"
+      }
+    ]
+  }
+]

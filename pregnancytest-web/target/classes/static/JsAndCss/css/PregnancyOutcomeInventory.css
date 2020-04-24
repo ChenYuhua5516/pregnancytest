@@ -1,0 +1,86 @@
+#max {
+	width: 1200px;
+	margin: 0 auto;
+	background-color: #E3F1FF;
+	border: 1px solid #A2C2EC;
+}
+
+#tab {
+	margin: 10px;
+	width: 110%;
+	height: 8%;
+}
+
+#tab tr {
+	line-height: 2%;
+}
+
+.t1 {
+	width: 60%;
+}
+
+#max2 {
+	width: 99%;
+	margin: auto;
+	color: #283C8E;
+	background-color: #B7D4F2;
+	border: 1px solid #A2C2EC;
+}
+
+#max22 {
+	width: 99%;
+	margin: auto;
+	background-color: #E3F1FF;
+	border: 1px solid #A2C2EC;
+}
+
+#max22 table {
+	width: 100%;
+	margin: 2%;
+}
+
+#max3 {
+	width: 98%;
+	margin: auto;
+	color: #283C8E;
+	background-color: #B7D4F2;
+	border: 1px solid #A2C2EC;
+}
+
+#max33 {
+	width: 100%;
+	margin: auto;
+	background-color: #E3F1FF;
+	border: 1px solid #A2C2EC;
+}
+
+.max333 {
+	width: 96%;
+	margin: auto;
+	margin-top: 1%;
+	background-color: #B7D4F2;
+	border: 1px solid #A2C2EC;
+}
+
+.max3333 {
+	width: 100%;
+	background-color: #E3F1FF;
+	border: 1px solid #A2C2EC;
+}
+
+.max3333 table {
+	widows: 100%;
+}
+
+.sub {
+	color: #253F6F;
+	margin-left: 15%;
+	margin-top: 5%;
+	width: 15%;
+}
+
+.subm {
+	color: #253F6F;
+	margin-left: 1%;
+	width: 15%;
+}

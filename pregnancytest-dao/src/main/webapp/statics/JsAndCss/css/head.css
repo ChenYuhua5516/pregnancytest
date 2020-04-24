@@ -1,0 +1,74 @@
+.head_main {
+	width: 100%;
+	height: 70px;
+	margin: 0px auto;
+	border-bottom: 2px solid deepskyblue;
+	background-color: #F9F9F9;
+	font-family: "微软雅黑";
+}
+
+.head_portrait {
+	width: 60px;
+	height: 60px;
+	float: left;
+	border: 1px solid darkgray;
+	border-radius: 5px;
+	margin-left: 10px;
+	margin-top: 5px;
+	position: relative;
+	margin-right: 40px;
+}
+
+.head_main ul {
+	margin-top: 26px;
+	height: 30px;
+	border-radius: 2px;
+	border: 0px;
+	background-color: #F8F8F8;
+	outline: none;
+}
+
+.head_navigation {
+	width: 150px;
+	height: 280px;
+	border: 1px solid darkgray;
+	position: absolute;
+	top: 65px;
+	padding-top: 20px;
+	border-bottom: 1px solid darkgray;
+	border-radius: 10px;
+	display: none;
+	background-color: white;
+}
+
+.head_navigation .ul li {
+	margin-left: -40px;
+	height: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	list-style-type: none;
+}
+
+.head_navigation .ul {
+	margin-top: 0px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+.head_navigation .ul li:hover {
+	background-color: deepskyblue;
+	color: white;
+}
+
+.head_portrait a:hover {
+	text-decoration: none;
+}
+
+.head_mains {
+	width: 100%;
+	float: left;
+}
+
+iframe {
+	border: 0px;
+}

@@ -1,0 +1,82 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+table .tr {
+	height: 25px;
+}
+
+table tr td {
+	overflow: hidden;
+	text-align: center;
+}
+
+table .sid {
+	width: 65px;
+	text-align: center;
+	overflow: inherit;
+}
+
+table .name {
+	width: 120px;
+	text-align: center;
+	overflow: hidden;
+}
+
+table .id {
+	width: 150px;
+	text-align: center;
+	overflow: hidden;
+}
+
+table .age {
+	width: 50px;
+	text-align: center;
+}
+
+table .date {
+	width: 150px;
+	text-align: center;
+}
+
+table .addr {
+	width: 200px;
+	text-align: center;
+}
+
+table .phone {
+	width: 150px;
+	text-align: center;
+}
+
+table .A {
+	width: 70px;
+	text-align: center;
+}
+
+table .B {
+	width: 70px;
+	text-align: center;
+}
+
+table .datetime {
+	width: 70px;
+	text-align: center;
+}
+
+.panel-heading input {
+	width: 240px;
+	height: 30px;
+}
+
+.panel-heading textarea {
+	resize: none;
+	border: 0px;
+	outline: none;
+	border-radius: 5px;
+}
+
+table .tr:hover {
+	background-color: #DFF0D8;
+}

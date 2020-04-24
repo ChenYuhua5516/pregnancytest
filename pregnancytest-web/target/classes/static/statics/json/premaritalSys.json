@@ -1,0 +1,71 @@
+[
+  {
+    "title":"申报与证明打印",
+    "href":"",
+    "children":[
+      
+      {
+        "title":"婚前医学检查证明(女)",
+        "href":"Premaritalwoman"
+      },
+      {
+        "title":"婚前医学检查证明(男)",
+        "href":"Premaritalman"
+      }
+    ]
+  },
+  {
+    "title":"女性常规检查",
+    "href":"",
+    "children":[
+      {
+        "title":"常规拓展项目",
+        "href":"RoutineExpansionProject"
+      },
+      {
+        "title":"X射线检查",
+        "href":"xian"
+      },
+      {
+        "title":"口腔检查",
+        "href":"kouqiang"
+      },
+      {
+        "title":"检查结果",
+        "href":"checkResult"
+      }
+    ]
+  },
+  {
+    "title":"男性常规检查",
+    "href":"",
+    "children":[
+      {
+        "title":"常规拓展项目",
+        "href":"RoutineExpansionProjectnan"
+      },
+      {
+        "title":"X射线检查",
+        "href":"xiannan"
+      },
+      {
+        "title":"口腔检查",
+        "href":"kouqiangnan"
+      },
+      {
+        "title":"检查结果",
+        "href":"checkResultnan"
+      }
+    ]
+  },
+  {
+    "title": "系统设置",
+    "href": "",
+    "children": [
+      {
+        "title": "化验项目匹配",
+        "href": "selectExamine"
+      }
+    ]
+  }
+]

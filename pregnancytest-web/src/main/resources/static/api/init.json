@@ -1,0 +1,232 @@
+{
+  "homeInfo": {
+    "title": "首页",
+    "href": "page/welcome-1.html?t=1"
+  },
+  "logoInfo": {
+    "title": "LAYUI MINI",
+    "image": "/images/logo.png",
+    "href": ""
+  },
+  "menuInfo": [
+    {
+      "title": "常规管理",
+      "icon": "fa fa-address-book",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "信息查询",
+          "href": "",
+          "icon": "fa fa-home",
+          "target": "_self",
+          "child": [
+            {
+              "title": "基础档案信息",
+              "href": "QueryBasicInformationFile.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            },
+            {
+              "title": "未填信息查询",
+              "href": "Unfilledquery1.html",
+              "icon": "fa fa-tachometer",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "基础档案信息",
+          "href": "",
+          "icon": "fa fa-calendar",
+          "target": "_self",
+          "child": [
+            {
+              "title": "新建档案",
+              "href": "addNewFile.html",
+              "icon": "fa fa-list-alt",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "短信随访服务",
+      "icon": "fa fa-lemon-o",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "短信收发",
+          "href": "",
+          "icon": "fa fa-dot-circle-o",
+          "target": "_self",
+          "child": [
+            {
+              "title": "自定义短信随访",
+              "href": "zdydxsf.html",
+              "icon": "fa fa-dot-circle-o",
+              "target": "_self"
+            },
+            {
+              "title": "评估建议短信随访",
+              "href": "pgjydxsf.html",
+              "icon": "fa fa-adn",
+              "target": "_self"
+            },
+            {
+              "title": "已发短信统计表",
+              "href": "SMSStatisticsTable.html",
+              "icon": "fa fa-adn",
+              "target": "_self"
+            }
+          ]
+        }
+
+
+      ]
+    },
+    {
+      "title": "影像系统",
+      "icon": "fa fa-slideshare",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "影像工作站",
+          "href": "",
+          "icon": "fa fa-meetup",
+          "target": "",
+          "child": [
+            {
+              "title": "查询档案信息",
+              "href": "QueryFileInformation.html?v=1",
+              "icon": "fa fa-calendar",
+              "target": "_self"
+            },
+            {
+              "title": "打开超声影像",
+              "href": "OpenTheUltrasonicImage.html?v=1",
+              "icon": "fa fa-calendar",
+              "target": "_self"
+            },
+            {
+              "title": "新增B超检查",
+              "href": "addBmodl.html?v=1",
+              "icon": "fa fa-calendar",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "婚检系统",
+      "icon": "fa fa-slideshare",
+      "href": "",
+      "target": "_self",
+      "child": [
+        {
+          "title": "申报与证明打印",
+          "href": "",
+          "icon": "fa fa-meetup",
+          "target": "",
+          "child": [
+            {
+              "title": "婚前医学检查证明(女)",
+              "href": "Premaritalwoman.html?v=1",
+              "icon": "fa fa-calendar",
+              "target": "_self"
+            },
+            {
+              "title": "婚前医学检查证明(男)",
+              "href": "Premaritalman.html?v=1",
+              "icon": "fa fa-calendar",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "女性常规检查",
+          "href": "",
+          "icon": "fa fa-meetup",
+          "target": "",
+          "child": [
+            {
+              "title": "常规拓展项目",
+              "href": "RoutineExpansionProject.html?v=1",
+              "icon": "fa fa-calendar",
+              "target": "_self"
+            },
+            {
+              "title": "X射线检查",
+              "href": "xian.html?v=1",
+              "icon": "fa fa-calendar",
+              "target": "_self"
+            },
+            {
+              "title": "口腔检查",
+              "href": "kouqiang.html?v=1",
+              "icon": "fa fa-calendar",
+              "target": "_self"
+            },
+
+            {
+              "title": "检查结果",
+              "href": "checkResult.html?v=1",
+              "icon": "fa fa-calendar",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "男性常规检查",
+          "href": "",
+          "icon": "fa fa-meetup",
+          "target": "",
+          "child": [
+            {
+              "title": "常规拓展项目",
+              "href": "RoutineExpansionProjectnan.html?v=1",
+              "icon": "fa fa-calendar",
+              "target": "_self"
+            },
+            {
+              "title": "X射线检查",
+              "href": "xiannan.html?v=1",
+              "icon": "fa fa-calendar",
+              "target": "_self"
+            },
+            {
+              "title": "口腔检查",
+              "href": "kouqiangnan.html?v=1",
+              "icon": "fa fa-calendar",
+              "target": "_self"
+            },
+            {
+              "title": "检查结果",
+              "href": "checkResultnan.html?v=1",
+              "icon": "fa fa-calendar",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "系统设置",
+          "href": "",
+          "icon": "fa fa-superpowers",
+          "target": "_self",
+          "child": [
+            {
+              "title": "化验项目匹配",
+              "href": "PremaritalSettings.html?v=1",
+              "icon": "fa fa-calendar",
+              "target": "_self"
+            }
+            ]
+        }
+      ]
+    }
+  ]
+}

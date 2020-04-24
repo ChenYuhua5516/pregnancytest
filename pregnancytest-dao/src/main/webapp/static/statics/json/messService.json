@@ -1,0 +1,16 @@
+[
+  {
+    "title":"短信收发",
+    "href":"",
+    "children":[
+      {
+        "title":"自定义短信随访",
+        "href":"zdydxsf"
+      },
+      {
+        "title":"评估建议短信随访",
+        "href":"pgjydxsf"
+      }
+    ]
+  }
+]

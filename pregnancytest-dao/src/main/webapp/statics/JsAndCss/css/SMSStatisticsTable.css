@@ -1,0 +1,94 @@
+#sms {
+	width: 100%;
+	height: 700px;
+	float: left;
+	margin-bottom: -80%;
+	border: 1px solid #A1C2EC;
+	background-color: #E3F1FF;
+}
+
+#sms1 {
+	width: 99%;
+	margin-left: 0.4%;
+	margin-top: 0.1%;
+	float: left;
+	color: #304593;
+	border: 1px solid #A1C2EC;
+	background-color: #BCD7F3;
+}
+
+#sms2 {
+	width: 99%;
+	float: left;
+	margin-left: 0.4%;
+	line-height: 30px;
+	border: 1px solid #A1C2EC;
+	background-color: #E3F1FF;
+}
+
+#sms3 {
+	width: 99%;
+	margin-left: 0.4%;
+	margin-top: 1%;
+	float: left;
+	color: #304593;
+	border: 1px solid #A1C2EC;
+	background-color: #BCD7F3;
+}
+
+#sms4 {
+	width: 99%;
+	float: left;
+	margin-left: 0.4%;
+	line-height: 70px;
+	border: 1px solid #A1C2EC;
+	background-color: #E3F1FF;
+}
+
+#sms5 {
+	width: 99%;
+	margin-left: 0.4%;
+	margin-top: 1%;
+	float: left;
+	color: #304593;
+	border: 1px solid #A1C2EC;
+	background-color: #BCD7F3;
+}
+
+#sms6 {
+	width: 99%;
+	float: left;
+	margin-left: 0.4%;
+	border: 1px solid #A1C2EC;
+	background-color: white;
+}
+
+.btn1 {
+	color: #1B3086;
+	width: 12%;
+	background-color: #9DC2EC;
+	margin-left: 60%;
+	margin-top: 0.2%;
+}
+
+.btn {
+	color: #1B3086;
+	background-color: #9DC2EC;
+	margin-left: 1.5%;
+	width: 12%;
+}
+
+#tab {
+	width: 98%;
+	margin: 12px;
+	color: #324997;
+	background-color: #E3F1FF;
+}
+
+#tab td {
+	border: 1px solid #9DBFEB;
+}
+
+#tab1 {
+	background-color: #9FC4ED;
+}

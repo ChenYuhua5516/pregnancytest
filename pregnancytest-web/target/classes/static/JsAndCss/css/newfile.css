@@ -1,0 +1,329 @@
+input {
+	border: 2px solid;
+	border-color: #ADC9EE;
+}
+
+select {
+	border: 2px solid;
+	border-color: #ADC9EE;
+}
+
+div {
+	sssss-height: 24px;
+	margin: 0px auto;
+}
+
+#noe {
+	width: 800px;
+	border: 2px solid;
+	border-color: #97BAE8;
+}
+
+#tow {
+	text-align: center;
+}
+
+body {
+	background: #E3F1FF;
+}
+
+table {
+	text-align: center;
+}
+
+.noe {
+	line-height: 42px;
+}
+
+.lu {
+	color: #27B6AE;
+	font-size: 14px;
+	font-family: 宋体;
+	padding: 0 20px 0 0px;
+}
+
+#tow {
+	border: 2px solid;
+	border-color: #97BAE8;
+	width: 748px;
+	text-align: left;
+}
+
+#three {
+	background: #C3DBF5;
+}
+
+#five {
+	border: 2px solid;
+	border-color: #97BAE8;
+	width: 748px;
+	text-align: left;
+}
+
+#six {
+	background: #C3DBF5;
+}
+
+#seven {
+	border: 2px solid;
+	border-color: #97BAE8;
+	width: 748px;
+	text-align: left;
+}
+
+#eigth {
+	background: #C3DBF5;
+}
+
+#nine {
+	border: 2px solid;
+	border-color: #97BAE8;
+	width: 748px;
+	text-align: left;
+}
+
+#ten {
+	background: #C3DBF5;
+}
+
+#eleven {
+	border-color: #97BAE8;
+	width: 740px;
+	text-align: left;
+}
+
+.eleven {
+	text-align: left;
+}
+
+#twelve {
+	text-align: center;
+}
+
+.four {
+	padding: 0 0 0 40px;
+}
+
+.noe {
+	padding: 0 0 0 40px;
+}
+
+#information {
+	text-align: left;
+}
+
+td {
+	padding: 0 7px 0 10px;
+}
+
+.blue {
+	color: #142881;
+}
+
+.red {
+	color: red;
+}
+
+.neirong {
+	background-color: #E3F1FE;
+	width: 90px;
+}
+
+.neirong_1 {
+	background-color: #E3F1FE;
+	width: 110px;
+}
+
+#max {
+	border: 1px #96AEC7 solid;
+	height: 640px;
+	width: 100%;
+	background-color: #E3F1FE;
+}
+
+#max_1 {
+	border: 1px #96AEC7 solid;
+	position: relative;
+	left: 1px;
+	top: 1px;
+	height: 635px;
+	width: 99%;
+	background-color: #E3F1FE;
+}
+
+#middle_1 {
+	position: relative;
+	left: 1px;
+	top: 1px;
+	border: 1px #96AEC7 solid;
+	height: 20px;
+	width: 100%;
+	background-color: #C6DEF5;
+}
+
+#neirong {
+	position: relative;
+	left: 1px;
+	top: 0px;
+	border: 1px #96AEC7 solid;
+	height: 121px;
+	width: 100%;
+	background-color: #E3F1FE;
+}
+
+#middle_2 {
+	position: relative;
+	left: 1px;
+	top: 1px;
+	border: 1px #96AEC7 solid;
+	height: 20px;
+	width: 100%;
+	background-color: #C6DEF5;
+}
+
+#neirong_2 {
+	position: relative;
+	left: 1px;
+	top: 0px;
+	border: 1px #96AEC7 solid;
+	height: 472px;
+	width: 100%;
+	background-color: white;
+}
+
+.neirong_u1 {
+	background-color: #E3F1FE;
+}
+
+.title_u1 {
+	background-color: #C6DEF5;
+}
+
+#max_u1 {
+	border: 1px #96AEC7 solid;
+	height: 640px;
+	width: 100%;
+	background-color: #E3F1FE;
+}
+
+#max_1_u1 {
+	border: 1px #96AEC7 solid;
+	position: relative;
+	left: 1px;
+	top: 1px;
+	height: 635px;
+	width: 99%;
+	background-color: #E3F1FE;
+}
+
+#title_1_u1 {
+	position: relative;
+	left: 1px;
+	top: 1px;
+	border: 1px #96AEC7 solid;
+	height: 20px;
+	width: 100%;
+}
+
+#title_2_u1 {
+	position: relative;
+	left: 1px;
+	top: 1px;
+	border: 1px #96AEC7 solid;
+	height: 539px;
+	width: 100%;
+}
+
+#neirong_1_u1 {
+	position: relative;
+	left: 1px;
+	top: 1px;
+	border: 1px #96AEC7 solid;
+	width: 100%;
+}
+
+#neirong_2_u1 {
+	position: relative;
+	top: 1px;
+	border: 1px #96AEC7 solid;
+	width: 100%;
+	height: 513px;
+	background-color: white;
+}
+
+.tip_u1 {
+	background-color: #C6DEF5;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+#time_u1 {
+	width: 300px;
+}
+
+.neirong_u2 {
+	background-color: #E3F1FE;
+}
+
+.title_u2 {
+	background-color: #C6DEF5;
+}
+
+#max_u2 {
+	border: 1px #96AEC7 solid;
+	height: 640px;
+	width: 100%;
+	background-color: #E3F1FE;
+}
+
+#max_1_u2 {
+	border: 1px #96AEC7 solid;
+	position: relative;
+	left: 1px;
+	top: 1px;
+	height: 635px;
+	width: 99%;
+	background-color: #E3F1FE;
+}
+
+#title_1_u2 {
+	position: relative;
+	left: 1px;
+	top: 1px;
+	border: 1px #96AEC7 solid;
+	height: 20px;
+	width: 100%;
+}
+
+#title_2_u2 {
+	position: relative;
+	left: 1px;
+	top: 1px;
+	border: 1px #96AEC7 solid;
+	height: 560px;
+	width: 100%;
+}
+
+#neirong_1_u2 {
+	position: relative;
+	left: 1px;
+	top: 1px;
+	border: 1px #96AEC7 solid;
+	width: 100%;
+}
+
+#neirong_2_u2 {
+	position: relative;
+	top: 1px;
+	border: 1px #96AEC7 solid;
+	width: 100%;
+	height: 535px;
+	background-color: white;
+}
+
+.tip {
+	width: 200px;
+	background-color: #C6DEF5;
+}

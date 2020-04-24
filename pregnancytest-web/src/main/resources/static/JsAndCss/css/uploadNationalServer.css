@@ -1,0 +1,77 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑";
+}
+
+button {
+	width: 100px;
+	height: 30px;
+	outline: none;
+	border: 0px;
+	color: white;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.panel-heading .tr {
+	text-align: center;
+	width: 100%;
+}
+
+.panel-heading .tr .td {
+	width: 200px;
+}
+
+.panel-heading .hide {
+	width: 50%;
+	float: left;
+}
+
+.panel-heading .schedule {
+	width: 30%;
+	float: right;
+}
+
+table tr th {
+	text-align: center;
+}
+
+table tr td {
+	text-align: center;
+}
+
+table .tr:hover {
+	background-color: #DFF0D8;
+}
+
+.modal-dialog {
+	width: 100%;
+}
+
+.modal-body #modal-bodyA {
+	border: 1px;
+	width: 300px;
+	height: 300px;
+	float: left;
+}
+
+.modal-body #modal-bodyB {
+	border: 1px;
+	width: 300px;
+	height: 300px;
+	float: left;
+}
+
+.main_left table tr td {
+	padding-bottom: 12px;
+}
+
+.main_right table .tr:hover {
+	background-color: #DFF0D8;
+}
+
+table {
+	font-family: "微软雅黑";
+	font-size: 15px;
+}

@@ -1,0 +1,114 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "微软雅黑";
+}
+
+.divnext {
+	width: 98%;
+	margin: 2% 1% 1% 1%;
+}
+
+#main {
+	width: 90%;
+	margin: 0% 5% 0% 5%;
+}
+
+.trcss {
+	display: block; /*将tr设置为块体元素*/
+	margin: 2% 0% 0% 0%; /*设置tr间距为2px*/
+}
+
+.othertable {
+	width: 94%;
+	margin: 1% 2% 1% 3%;
+}
+
+.modal-body textarea {
+	width: 100%;
+	height: 100px;
+	resize: none;
+	border: 0px;
+	border-radius: 5px;
+	outline: none;
+}
+
+textarea {
+	width: 100%;
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	resize: none;
+	outline: none;
+	background-color: white;
+}
+
+.tdsmall {
+	width: 20%;
+}
+
+.tdmiddle {
+	width: 65%;
+}
+
+.selectwidth {
+	width: 180px;
+}
+
+/*签字板样式*/
+.style1 {
+	font-size: xx-large;
+	font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+	color: #FF3399;
+}
+
+.style2 {
+	font-size: 16px;
+	font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+	color: #FF3399;
+}
+
+.style3 {
+	font-size: 12px;
+	font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+	color: #000000;
+}
+
+.style4 {
+	font-size: 12px;
+	font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+	color: #FF0000;
+}
+
+.table-kongzhi {
+	width: 90%;
+	margin: auto;
+}
+
+.dialog-width {
+	width: 700px;
+	height: auto;
+}
+
+.kongzhi-margin {
+	margin-top: 30px;
+}
+
+.kongzhi-bihua {
+	width: 20%;
+	text-align: center;
+}
+
+.kongzhi-bihua1 {
+	width: 80%;
+}
+
+.qianzhi-table {
+	width: 90%;
+	margin-top: 30px;
+}
+
+.btn-margin {
+	margin: 30px 30px 20px 35px;
+}

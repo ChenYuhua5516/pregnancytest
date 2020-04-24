@@ -1,0 +1,22 @@
+[
+  {
+    "title":"孕前优生报表",
+    "href":"",
+    "children":[
+      {
+        "title":"受检人员名单",
+        "href":"queryAllMInfo.action"
+      }
+    ]
+  },
+  {
+    "title":"短信报表",
+    "href":"",
+    "children":[
+      {
+        "title":"已发信息统计表",
+        "href":"queryAllSms_send.action"
+      }
+    ]
+  }
+]

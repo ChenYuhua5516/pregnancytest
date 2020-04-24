@@ -1,0 +1,65 @@
+#h1 {
+	color: #ff0099;
+}
+
+#h2 {
+	color: #ff0000;
+}
+
+.h4 {
+	color: #0000ff;
+	position: relative;
+	top: 0px;
+	left: 75px;
+}
+
+#right_div {
+	width: 500px;
+	height: 400px;
+	position: relative;
+	top: -300px;
+	left: 470px;
+}
+
+#right_div_top {
+	background-color: #f1f1f1;
+	color: green;
+	font-size: 24px;
+	font-weight: 500;
+}
+
+#from_label {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+#div_checkbox {
+	position: relative;
+	left: 100px;
+}
+
+#sapn {
+	position: relative;
+	left: 100px;
+	color: #c0c0c0;
+}
+
+#div_submit {
+	position: relative;
+	top: 30px;
+}
+
+#div_submit input {
+	background-color: #e6e6e6;
+	border-color: #cccccc;
+}
+
+#right_div_below {
+	position: relative;
+	left: 20px;
+}
+
+#body {
+	position: relative;
+	left: 200px;
+}

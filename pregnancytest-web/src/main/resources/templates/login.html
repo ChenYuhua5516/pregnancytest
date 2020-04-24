@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>品胜孕前优生健康检查项目信息系统</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <script type="text/javascript" src="/JsAndCss/loginJs/jquery.js"></script>
+  </head>
+<script type="text/javascript">
+function myBrowser(){
+    //ie?    
+    if (!!window.ActiveXObject || "ActiveXObject" in window){   
+        //是  
+    	var browser=navigator.appName
+    	var b_version=navigator.appVersion
+    	var version=b_version.split(";");
+    	var trim_Version=version[1].replace(/[ ]/g,"");
+    	if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0")
+    	{
+    	    alert("请使用IE9及以上的版本！");
+    	}
+    	    else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE6.0")
+    	{
+    	    alert("请使用IE9及以上的版本！");
+    	}
+    	    else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE5.0")
+    	{
+    	    alert("请使用IE9及以上的版本！");
+    	    
+    	}   else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0")
+    		
+    	{
+    	    alert("请使用IE9及以上的版本！");
+    	} else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE9.0")
+    		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+    	{
+           //alert("IE通过！");
+    	}
+        }else{  
+        //不是   
+    			if(window.navigator.userAgent.indexOf('AppleWebKit') != -1) {
+    				alert('当前为极速模式,请打开360兼容模式');
+    				return false;
+    			}else{
+    				//alert('360通过！');
+    			}
+        }
+}
+window.onload=function(){
+	myBrowser();
+}
+//myBrowser() end
+//以下是调用上面的函数
+
+</script>
+
+<body class="login" onkeydown="keyLogin(event);">
+<div class="login-bg"><img src="/img/bg.jpg" /></div>
+<div class="login-wrap">
+    <h1>品胜孕前优生健康检查项目信息系统</h1>
+
+     <form class="layui-form"  id="loginForm"  method="post">
+        <div class="login-cont-k">
+            <p class="prefix"></p>
+            <div class="layui-form-item">
+                <label class="layui-form-label">用户名：</label>
+                <div class="layui-input-block" id="view">
+                    <input  id="user"  type="text"  required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+
+                </div>
+            </div>
+
+            <p class="prefix"></p>
+            <div class="layui-form-item">
+                <label class="layui-form-label">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+                <div class="layui-input-block">
+                    <input  id="pwd"  type="password" name="upwd" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+
+            <p class="prefix"></p>
+
+            <div class="layui-form-item">
+                <button type="button" class="layui-btn layui-col-sm12" onclick="login();" lay-filter="formSubmit">登录</button>
+            </div>
+        </div>
+        <br>
+ </form>
+    <div class="copyright">
+        <p>Copyright &copy; 版权所有：品胜互联科技有限公司 | 国家卫生计生委科学技术研究所</p>
+        <p>技术支持：北大青鸟长沙大计校区 / 国家人口和生殖健康科学数据中心</p>
+        <p>科技项目：国家重点研发计划“生殖健康及重大出生缺陷防控研究”重点专项</p>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+function keyLogin(e){
+	  var theEvent = window.event || e;
+	      var code = theEvent.keyCode || theEvent.which;
+	   if (code==13) {  //回车键的键值为13
+		   login();
+	   }
+	  }
+function login(){
+	 var name=$("#uname").val();	
+	 var pwd=$("#pwd").val();
+	    	$.post("login.action",{UName:name,UPwd:pwd},function(data){
+				var str=JSON.parse(data);
+				
+				if (str.con=='1') {
+					window.location.href = "/examines/main.action";
+				}else{		
+				 document.getElementById("pwd").value="";
+					 document.getElementById("pwd").setAttribute("placeholder","密码错误");	
+		
+				}
+			 });	    
+	}	  
+	  
+</script>
+<script id="userList" type="text/html">
+    <select name="uname" id="uname" lay-verify="loginForm">
+        {{# layui.each(d,function(index,item){ }}
+        <option value="{{ item.UName }}">{{item.UID}} | {{item.UName}}</option>
+        {{# });}}
+    </select>
+</script>
+<script type="text/javascript" src="/layui/layui.js"></script>
+<script type="text/javascript" src="/js/login.js"></script>
+</html>

@@ -1,0 +1,48 @@
+[
+  {
+    "title":"系统设置",
+    "href":"ImportantParameterSetting2",
+    "children":[
+      {
+        "title":"重要参数设置",
+        "href":"ImportantParameterSetting2"
+      },
+     
+      {
+        "title":"女开单设置",
+        "href":"/examines/SysNvKaiDanSelectAll.action"
+      },
+      {
+        "title":"男开单设置",
+        "href":"/examines/selectAlls.action"
+      },
+      
+      {
+        "title":"正常值范围查看",
+        "href":"importantCanShu"
+      }
+    ]
+  },
+  {
+    "title":"硬件设置",
+    "href":"",
+    "children":[
+      {
+        "title":"短信猫端口设置",
+        "href":"dxmdksz"
+      },{
+        "title":"条码打印机设置",
+        "href":"SystemBarcodePrintingSettings"
+      }
+    ]
+  },{
+  "title":"系统注册",
+  "href":"",
+  "children":[
+    {
+      "title":"用户管理",
+      "href":"Systemusermanagement"
+    }
+  ]
+}
+]

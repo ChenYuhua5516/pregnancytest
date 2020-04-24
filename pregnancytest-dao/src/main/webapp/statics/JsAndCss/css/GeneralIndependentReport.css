@@ -1,0 +1,36 @@
+body {
+	margin-left: 6%;
+}
+
+.modal-content {
+	width: 100%;
+	margin-top: 25%;
+	float: left;
+}
+
+.modal-header {
+	height: 40px;
+}
+
+.modal-body {
+	width: 60%;
+	height: 300px;
+	float: left;
+	margin: 5px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	border: 1px solid blue;
+	background-color: white;
+}
+
+.moadl-body-right {
+	width: 28%;
+	height: 300px;
+	position: absolute;
+	overflow: scroll;
+	overflow-x: hidden;
+	margin: 5px;
+	margin-left: 560px;
+	border: 1px solid blue;
+	background-color: white;
+}

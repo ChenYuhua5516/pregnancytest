@@ -1,0 +1,16 @@
+[
+  {
+    "title":"影像工作站",
+    "href":"",
+    "children":[
+      {
+        "title":"查询档案信息",
+        "href":"QueryFileInformation"
+      },
+      {
+        "title":"打开超声影像",
+        "href":"OpenTheUltrasonicImage"
+      }
+    ]
+  }
+]

@@ -1,0 +1,211 @@
+.input-group {
+	margin: 1% 0% 1% 0%;
+}
+
+.dev_head {
+	margin: 4px auto;
+	width: 98%;
+}
+
+.col-sm-2 {
+	width: 25%;
+}
+
+.dev_head99 {
+	width: 99.9%;
+}
+
+.col-sm-10 {
+	width: 70%;
+}
+
+.laft_table {
+	margin: 0 auto;
+	width: 68%;
+}
+
+.checkbox_table_td, .checkbox_table_td1 {
+	width: 95%;
+}
+
+.checkbox_table_td td {
+	width: 27%;
+}
+
+.checkbox_table_td1 td {
+	width: 21%;
+}
+
+.border_div {
+	margin: 4px auto;
+	width: 78%;
+	border: 1px solid #C7DDEF;
+}
+
+.margin_auto {
+	margin: 0 auto;
+}
+
+.div_iframe {
+	border-top: 1px solid #C7DDEF;
+}
+
+.font_style {
+	font-family: "微软雅黑";
+	font-size: 12px;
+}
+
+.width_div1 {
+	width: 97%;
+}
+
+.position_div_cen {
+	position: relative;
+	left: 3%;
+	top: 120px;
+}
+
+.div_iframe_width {
+	width: 99%;
+	border-left: 1px solid #C7DDEF;
+	border-right: 1px solid #C7DDEF;
+}
+
+.border_div1 {
+	margin: 4px auto;
+	width: 90%;
+}
+
+ul {
+	list-style: none;
+}
+
+.btn-primary_left {
+	float: left;
+}
+
+.div_width_98 {
+	width: 99.2%;
+	height: 470px;
+	margin: 0 auto;
+}
+
+.table-bordered_tabx {
+	height: 400px;
+	margin: 0 auto;
+	border: 1px solid #C7DDEF;
+}
+
+.btn_right {
+	position: relative;
+	left: 78%;
+}
+
+.position_font {
+	position: absolute;
+	top: 173px;
+	left: 55.5%;
+}
+
+#pos_left {
+	position: relative;
+	left: -1.8%;
+}
+
+.pos_left_send {
+	position: relative;
+	left: 27%;
+	top: 5px;
+}
+
+.pos_table_inttext {
+	position: absolute;
+	left: 65%;
+	top: 250px;
+}
+
+.form-control_pos {
+	position: absolute;
+	left: 100%;
+	top: -25px;
+}
+
+.ul_float>li {
+	float: left;
+}
+
+.div_widtd_30 {
+	width: 35%;
+}
+
+.div_widtd_40 {
+	width: 40%;
+}
+
+.div_widtd_25 {
+	width: 25%;
+}
+
+.dev_head_he400 {
+	height: 400px;
+}
+
+.text_align_left {
+	text-align: left;
+}
+
+.dev_tab_he {
+	height: 450px;
+}
+
+.label_red {
+	color: red;
+}
+
+.label_green {
+	color: #00BFFF;
+}
+
+.label_blue {
+	color: deeppink;
+}
+
+.label_grey {
+	color: darkgrey;
+}
+
+.tab_padding1 tr td {
+	padding: 1px 12px 1px 12px;
+}
+
+.tab_padding2 tr td {
+	padding: 3px 20px 10px 3px;
+}
+
+.tab_padding3 tr td {
+	padding: 4px 1px 4px 1px;
+}
+
+.tab_padding tr td {
+	padding: 1px 6px 1px 6px;
+}
+
+.div_wid_het {
+	border-top: none;
+	border-bottom: 1px solid #66CCFF;
+	border-left: 1px solid #66CCFF;
+	border-right: 1px solid #66CCFF;
+	height: 300px;
+	width: 200px;
+	overflow: hidden;
+}
+
+.border_divCs {
+	margin: 4px auto;
+	width: 76%;
+}
+
+.border_divCsuser {
+	margin: 2px auto;
+	width: 85%;
+}

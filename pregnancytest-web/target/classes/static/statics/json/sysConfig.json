@@ -1,0 +1,41 @@
+[
+  {
+    "title":"系统记录",
+    "href":"",
+    "children":[
+      {
+        "title":"系统记录修改日志",
+        "href":"updateLog"
+      },
+      {
+        "title":"用户登录日志",
+        "href":"yhdlrz"
+      }
+    ]
+  },
+  {
+    "title":"其他产品",
+    "href":"",
+    "children":[
+      {
+        "title":"打开公司网页",
+        "href":"dkgswy"
+      },
+      {
+        "title":"打开产品介绍",
+        "href":"dkcpjs"
+      }
+
+    ]
+  },
+  {
+    "title": "关于我们",
+    "href": "",
+    "children": [
+      {
+        "title": "关于我们",
+        "href": "aboutUs"
+      }
+    ]
+  }
+]

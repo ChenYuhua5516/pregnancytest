@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.daji</groupId>
+    <artifactId>pregnancytest</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>pregnancytest-api</module>
+        <module>pregnancytest-dao</module>
+        <module>pregnancytest-service</module>
+        <module>pregnancytest-serviceImpl</module>
+    </modules>
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+        <groupId>com.daji</groupId>
+        <artifactId>pregnancytest-api</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
+        <dependency>
+            <groupId>com.daji</groupId>
+            <artifactId>pregnancytest-dao</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.daji</groupId>
+            <artifactId>pregnancytest-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.daji</groupId>
+            <artifactId>pregnancytest-serviceImpl</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+
+</project>

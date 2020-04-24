@@ -1,0 +1,58 @@
+/*
+ * 导入平台
+ * @author Jack Smith
+ */
+.model-home {
+	height: 460px;
+	background-color: #E3F1FF;
+}
+
+#title_1 {
+	background-color: #E3F1FE;
+}
+
+.neirong {
+	position: relative;
+	left: 1px;
+	top: 1px;
+	border: 1px #BBD5F3 solid;
+	height: 430px;
+	background-color: white;
+}
+
+.btn-button {
+	background-color: #ABCBF0;
+	width: 100px;
+}
+
+.fenye {
+	position: relative;
+	left: 8px;
+	top: 8px;
+	width: 100%;
+	height: 30px;
+}
+
+.textarea-text {
+	width: 100%;
+	height: 250px;
+	margin-top: 20px;
+}
+
+#home-place {
+	width: 85%;
+	margin: 20px auto;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover
+	{
+	background-color: #E3F1FF;
+}
+
+.model-home-top {
+	background-color: #ABCBF0;
+}
+
+#tbody-result1 {
+	height: 250px;
+}
