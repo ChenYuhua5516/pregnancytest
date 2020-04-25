@@ -1,12 +1,22 @@
 package com.daji.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
 /**
  * //complete 婚检项目检查完成表
  */
+@Table(name = "complete")
 public class Complete {
-    private Integer autoId;//
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer autoid;//
     private Integer typeid;//婚检项目分类id(外)
 
     private String mid;//受检人编号(外)
@@ -15,15 +25,16 @@ public class Complete {
 
     private String doctorname;//医生名称
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createdate;//创建时间
 
-
-    public Integer getAutoId() {
-        return autoId;
+    public Integer getAutoid() {
+        return autoid;
     }
 
-    public void setAutoId(Integer autoId) {
-        this.autoId = autoId;
+    public void setAutoid(Integer autoid) {
+        this.autoid = autoid;
     }
 
     public Integer getTypeid() {
@@ -64,5 +75,17 @@ public class Complete {
 
     public void setCreatedate(Date createdate) {
         this.createdate = createdate;
+    }
+
+    @Override
+    public String toString() {
+        return "Complete{" +
+                "autoId=" + autoid +
+                ", typeid=" + typeid +
+                ", mid='" + mid + '\'' +
+                ", sex=" + sex +
+                ", doctorname='" + doctorname + '\'' +
+                ", createdate=" + createdate +
+                '}';
     }
 }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>X射线（男）</title>
+</head>
+
+
+<link rel="stylesheet" type="text/css" href="/JsAndCss/bootstrap/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="/JsAndCss/css/new_file.css"/><!--[if IE]>
+<![endif]-->
+<script type="text/javascript" src="/JsAndCss/js/jquery.min.js"></script>
+<script type="text/javascript" src="/JsAndCss/bootstrap/js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="/JsAndCss/js/xian.js"></script>
+
+<body>
+
+<div id="dd1" >
+	系统编号: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="id" readonly="readonly"/>
+	姓名: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="name" readonly="readonly"/><br /><br />
+	<div id="vv1">
+		<div id="oo1"> X射线检查<hr /></div>
+		X射线号: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" style="width: 570px;" id="xid" /><br /><br />
+		<table>
+			<tr>
+				<td>X射线所见: &nbsp;&nbsp;&nbsp;</td>
+				<td>
+					<textarea style="width: 550px; height: 100px;resize: none;" id="xtext"></textarea>
+				</td>
+			</tr>
+		</table>
+		<input type="radio" name="checktext" class="checktext" value="0" onclick="check()"/>心肺横隔未见明显异常或改变<br /><br />
+		<input type="radio"  name="checktext" class="checktext" value="1" onclick="check()"/>检查禁忌和其他原因未查<br /><br />
+		<input type="radio"  name="checktext" class="checktext" value="2" onclick="check()"/>存在异常情况，具体原因如下：<br /><br />
+		<textarea style="width: 666px; height: 100px;resize: none;" id="endtext"></textarea><br /><br />
+		<span id="pp1">
+					放射科医师签名:<select id="select">
+					<option value="${sessionScope.userid.uname}">${sessionScope.userid.uname}</option>
+					</select>
+					检查时间:<input type="date" id="checkdate"/>
+				</span>
+	</div>
+	<br />
+	<button onclick="save()">保&nbsp;存</button>&nbsp;&nbsp;<button>打&nbsp;印</button>&nbsp;&nbsp;
+</div>
+</body>
+<script src="${pageContext.request.contextPath}/laydate/laydate.js"></script>
+<script type="text/javascript">
+	//执行一个laydate实例
+	laydate.render({
+		elem: '#checkdate' //指定元素
+	});
+
+</script>
+</html>

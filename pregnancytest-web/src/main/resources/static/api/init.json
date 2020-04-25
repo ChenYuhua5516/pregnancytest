@@ -161,7 +161,7 @@
             },
             {
               "title": "X射线检查",
-              "href": "xian.html?v=1",
+              "href": "xian",
               "icon": "fa fa-calendar",
               "target": "_self"
             },
@@ -194,7 +194,7 @@
             },
             {
               "title": "X射线检查",
-              "href": "xiannan.html?v=1",
+              "href": "xiannan",
               "icon": "fa fa-calendar",
               "target": "_self"
             },
@@ -220,7 +220,7 @@
           "child": [
             {
               "title": "化验项目匹配",
-              "href": "PremaritalSettings.html?v=1",
+              "href": "PremaritalSettings",
               "icon": "fa fa-calendar",
               "target": "_self"
             }

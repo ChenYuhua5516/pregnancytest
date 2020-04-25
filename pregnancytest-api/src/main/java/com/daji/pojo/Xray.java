@@ -1,39 +1,47 @@
 package com.daji.pojo;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * X射线检查
  */
+@Table(name = "xray")
 public class Xray {
-    private Integer autoId;//主键自增
-    private String xRayId;//X射线号
-    private String xRayview;//X射线所见
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer autoid;//主键自增
+    private String xrayid;//X射线号
+    private String xrayview;//X射线所见
     private Integer check;//检查情况 1：心肺横隔未见明显异常或改变 2：检查禁忌和其他原因未查  3：存在异常情况 则往异常详情补充信息abnormal
     private String abnormal;//异常信息
     private String mid;//受检人编号(外)
     private Integer sex;//1：男2：女
 
-    public Integer getAutoId() {
-        return autoId;
+    public Integer getAutoid() {
+        return autoid;
     }
 
-    public void setAutoId(Integer autoId) {
-        this.autoId = autoId;
+    public void setAutoid(Integer autoid) {
+        this.autoid = autoid;
     }
 
-    public String getxRayId() {
-        return xRayId;
+    public String getXrayid() {
+        return xrayid;
     }
 
-    public void setxRayId(String xRayId) {
-        this.xRayId = xRayId;
+    public void setXrayid(String xrayid) {
+        this.xrayid = xrayid;
     }
 
-    public String getxRayview() {
-        return xRayview;
+    public String getXrayview() {
+        return xrayview;
     }
 
-    public void setxRayview(String xRayview) {
-        this.xRayview = xRayview;
+    public void setXrayview(String xrayview) {
+        this.xrayview = xrayview;
     }
 
     public Integer getCheck() {
@@ -71,9 +79,9 @@ public class Xray {
     @Override
     public String toString() {
         return "Xray{" +
-                "autoId=" + autoId +
-                ", xRayId='" + xRayId + '\'' +
-                ", xRayview='" + xRayview + '\'' +
+                "autoId=" + autoid +
+                ", xRayId='" + xrayid + '\'' +
+                ", xRayview='" + xrayview + '\'' +
                 ", check=" + check +
                 ", abnormal='" + abnormal + '\'' +
                 ", mid='" + mid + '\'' +

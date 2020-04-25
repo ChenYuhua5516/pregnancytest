@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>X射线（女）</title>
+	</head>
+
+	<link rel="stylesheet" type="text/css" href="/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="/JsAndCss/bootstrap/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="/JsAndCss/css/new_file.css"/><!--[if IE]>
+	<![endif]-->
+	<script type="text/javascript" src="/JsAndCss/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/JsAndCss/bootstrap/js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="/JsAndCss/js/xian.js"></script>
+
+
+	<body>
+		<div id="dd1" >
+			<input type="hidden" id="typeid" value="1">
+			<input type="hidden" id="sex" value="2">
+			<input type="hidden" id="cAutoId">
+			<input type="hidden" id="xAutoId">
+			系统编号: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="id" readonly="readonly"/>
+			姓名: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="name" readonly="readonly"/><br /><br />
+			<div id="vv1">
+				<div id="oo1"> X射线检查<hr /></div>
+				X射线号: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" style="width: 570px;" id="xRayId" /><br /><br />
+				<table>
+					<tr>
+						<td>X射线所见: &nbsp;&nbsp;&nbsp;</td>
+						<td>
+							<textarea style="width: 550px; height: 100px;resize: none;" id="xRayview"></textarea>
+						</td>
+					</tr>
+				</table>
+				<input type="radio" name="checktext" class="checktext" value="1"/>心肺横隔未见明显异常或改变<br /><br />
+				<input type="radio"  name="checktext" class="checktext" value="2"/>检查禁忌和其他原因未查<br /><br />
+				<input type="radio"  name="checktext" class="checktext" value="3"/>存在异常情况，具体原因如下：<br /><br />
+				<textarea style="width: 666px; height: 100px;resize: none;" id="abnormal"></textarea><br /><br />
+				<span id="pp1">
+					放射科医师签名:<input type="text" id="doctorname">
+					检查时间:<input type="datetime" id="createdate"/>
+				</span>
+			</div>
+			<br />
+			<button id="bc">保&nbsp;存</button>&nbsp;&nbsp;<button>打&nbsp;印</button>&nbsp;&nbsp;
+		</div>
+	</body>
+
+	<script src="/laydate/laydate.js"></script>
+	<script type="text/javascript">
+	$(function(){
+			$.post('getXrayByMidAndSex',function(e){
+				$("#xRayId").val(e.xrayid);
+				$("#xRayview").val(e.xrayview);
+				var i = e.check;
+				if(i!=0 && i<3){
+					var r = $("#n").val();
+					$("input:radio[value='"+i+"']").attr('checked','true');
+					$("#abnormal").attr('disabled','disabled');
+				}else if(i==3){
+					$("input:radio[value='"+i+"']").attr('checked','true');
+					$("#abnormal").val(e.abnormal);
+					$("#abnormal").attr('disabled','false');
+				}
+				$("#xAutoId").val(e.autoid)
+			});
+			$.post('getComplete',{"typeid":1,"sex":2},function(e){
+				console.log(e);
+				$("#doctorname").val(e.doctorname);
+				$("#createdate").val(e.createdate);
+				$("#cAutoId").val(e.autoid)
+			})
+			$("#bc").click(function(){
+				var abnormal = $("#abnormal").val();//异常情况
+				var check = $("input[type='radio']:checked").val();
+				var xRayview = $("#xRayview").val();//所见
+				var xAutoId = $("#xAutoId").val();//x射线ID
+				var cAutoId = $("#cAutoId").val();
+				var createdate = $("#createdate").val();//创建时间
+				var doctorname = $("#doctorname").val();//医生
+				var xRayId = $("#xRayId").val();//射线号
+				if(abnormal==null || abnormal==" "){
+					abnormal=null;
+				}
+				$.post('XrayByMidAndSex',{"abnormal":abnormal,"check":check,"xrayview":xRayview,"xAutoid":xAutoId,
+				"cDateTime":createdate,"cAutoid":cAutoId,"doctorname":doctorname,"xrayid":xRayId,"typeid":1,"sex":2},function(e) {
+					if(e=='uok') {
+						alert("修改成功！");
+					}else if(e=='uno'){
+					alert("修改失败！");
+					}else if(e=='aok'){
+					alert("新增成功！");
+					}else if(e=='ano'){
+						alert("新增失败！");
+											// 	,{time:1000,icon:6},function(){
+											// var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+											// parent.layer.close(index);
+										//});
+					}
+					else{
+						alert("修改失败！");
+						}
+				})
+			})
+
+			//监听提交
+			// form.on('submit(formDemo)', function(data){
+			// 	$.ajax({
+			// 		url:"XrayByMidAndSex",
+			// 		type: "post",
+			// 		data:$("#for").serialize(),
+			// 		dataType:"text",
+			// 		success:function(e){
+			// 			if(e=='uok'){
+			// 				layer.msg("修改成功！");
+			// 			}else if(e=='uno'){
+			// 				layer.msg("修改失败！");
+			// 			}else if(e=='aok'){
+			// 				layer.msg("新增成功！");
+			// 			}else if(e=='ano'){
+			// 				layer.msg("新增失败！");
+			// 					// 	,{time:1000,icon:6},function(){
+			// 					// var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+			// 					// parent.layer.close(index);
+			// 				//});
+			// 			}
+			// 			else{
+			// 				layer.msg("修改失败！");
+			// 			}
+			// 		}
+			// 	})
+			// 	return false;
+			// });
+		})
+	</script>
+</html>
