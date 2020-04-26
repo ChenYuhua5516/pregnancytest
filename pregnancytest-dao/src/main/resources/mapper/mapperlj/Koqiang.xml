@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.daji.daolj.Koqiang">
+    <select id="selectkq" resultType="Oralcavity">
+select * from oralcavity  where `mid`=#{mid} and sex=#{sex}
+    </select>
+    <select id="hjcx" resultType="Complete">
+        select * from complete  where `mid`=#{mid} and sex=#{sex}
+    </select>
+    <insert id="kqxz" parameterType="Oralcavity">
+insert into oralcavity(facility,finding,`check`,abnormal,`mid`,sex) values(#{facility},#{finding},#{check},#{abnormal},#{mid},#{sex})
+    </insert>
+    <update id="kqxg" parameterType="Oralcavity">
+update oralcavity set facility=#{facility},finding=#{finding},`check`=#{check},abnormal=#{abnormal} where autoid=#{autoid}
+    </update>
+    <insert id="hjxz" parameterType="Complete">
+        insert into complete(typeid,`mid`,sex,doctorname,createdate) values(#{typeid},#{mid},#{sex},#{doctorname},#{createdate})
+    </insert>
+    <select id="hjxmcx" resultType="Projecttype">
+select * from projecttype where typename=#{typename}
+</select>
+</mapper>
