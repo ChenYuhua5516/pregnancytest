@@ -13,6 +13,7 @@
         <module>pregnancytest-dao</module>
         <module>pregnancytest-service</module>
         <module>pregnancytest-serviceImpl</module>
+        <module>pregnancytest-web</module>
     </modules>
 <dependencyManagement>
     <dependencies>
