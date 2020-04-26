@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+		<link rel="stylesheet" type="text/css" href="/JsAndCss/bootstrap/css/bootstrap.css"/>
+	<head>
+		<meta charset="UTF-8">
+		<title>婚检化验项目匹配设置</title>
+		<style type="text/css">
+			#father_div {
+				margin: auto;
+				width: 1100px;
+				overflow: hidden;
+				height: auto;
+				border: 1px solid #B2D0F1;
+				background-color: #E3F1FE;
+				font-family: "微软雅黑";
+			}
+
+			.div_c {
+				float: left;
+			}
+
+			.son_01 {
+				width: 200px;
+				border: 1px solid #B2D0F1;
+				margin: 0 6px;
+				margin-top: 15px;
+			}
+
+			.son_02 {
+				width: 860px;
+				margin: 0 1px;
+				border: 1px solid #B2D0F1;
+				margin-top: 15px;
+			}
+
+			.div_c_02 {
+				border: 1px solid blue;
+				width: auto;
+				height: 300px;
+			}
+			.div_c_01{
+				margin: 5px 3px;
+			}
+			.div_c_02{
+				margin: 5px 2px 2px 2px;
+			}
+			.mytable{
+				margin: 5px 5px 5px 5px;
+				text-align: center;
+			}
+			.span_style_color{
+				background-color: #B2D0F1;
+				display:block;
+				color: #2B669A;
+			}
+			.button-home{
+				clear:both;
+				float: none;
+			}
+			.medical01{
+				margin-left:10px;
+			}
+			.button-btn{
+				margin-left:780px;
+			}
+			.button-btn1{
+				margin-left: 40px;
+			}
+			.button-home{
+			}
+
+			.select{border:1px solid #ccc;line-height:40px;color:#666;margin:-1px;padding:4px 3px;font-size:14px;width:150px;*width:130px;}
+			.select_border{*background:#fff;*border:1px solid #ccc;*padding:4px;width:150px;margin-left:-14px;}
+			.container{*border:0;*position:relative;*width:120px;*height:35px;*overflow:hidden;*background:#fff;}
+		</style>
+	   <script type="text/javascript" src="/JsAndCss/js/jquery.min.js"></script>
+	   <script type="text/javascript" src="/JsAndCss/bootstrap/js/bootstrap.min.js" ></script>
+	<script src="/JsAndCss/bootstrap/js/jquery-2.1.1.js"></script>
+	<script src="/JsAndCss/bootstrap/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="/lay/css/layui.css"  media="all">
+
+		<script type="text/javascript" src="/lay/layui.js"></script>
+		<script src="/cyhjs/PremaritalSettings.js"></script>
+
+	</head>
+
+
+
+	<body>
+
+		
+		<div id="father_div">
+			<div class="medical01">婚检化验匹配检查设置</div>
+
+
+			<div class="div_c son_01">
+				<form class="layui-form" action="">
+				<span class="span_style_color">项目明细</span>
+				<div class="div_c_01">
+					<input type="text" id="workname" />
+				</div>
+				<div class="div_c_02">
+					<textarea style="width: 100%;height: 100%;" id="result">
+
+
+					</textarea>
+				</div>
+				</form>
+			</div>
+
+
+			<div class=" son_02" style="float: left;">
+				<span class="span_style_color">匹配明细-双击删除行</span>
+
+
+
+
+
+				<table class="layui-hide" id="test" lay-filter="test" width="100%"></table>
+
+
+
+			</div>
+			<div class="button-home" style="width:98%;height:140px;margin:auto;">
+				<table  style="text-align:right;width:100%;margin-right:0px;margin-bottom:20px;">
+					<tr>
+						<td>
+							<!-- <div  value="1 0"></div>
+							<div id="page" class="page_div"></div> -->
+							<div class="fenye">
+							</div>
+							<div id="zxf_pagediv1" class="zxf_pagediv"></div>
+						</td>
+					</tr>
+				</table>
+					
+
+			</div>
+		</div>
+		
+		
+		
+	
+
+		<script type="text/html" id="toolbarDemo">
+			<div class="layui-btn-container">
+				<button class="layui-btn layui-btn-sm" lay-event="add">新增</button>
+				<button class="layui-btn layui-btn-sm" lay-event="beachDelete">批量删除</button>
+				<button class="layui-btn layui-btn-sm" lay-event="getCheckData">获取选中行数据</button>
+				<button class="layui-btn layui-btn-sm" lay-event="getCheckLength">获取选中数目</button>
+				<button class="layui-btn layui-btn-sm" lay-event="isAll">验证是否全选</button>
+			</div>
+		</script>
+		<script type="text/html" id="barDemo">
+			<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+			<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+		</script>
+	</body>
+
+</html>
