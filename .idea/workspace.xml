@@ -1,130 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="637377bf-5be0-4bd6-a201-e9fd0726c51c" name="Default Changelist" comment="lj首次提交">
-      <change afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Hascontentinfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/RandomUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Smsstatiscstable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/TypeList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/ChecktypeinfoMaperLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/CompleteMapperLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/EducationinfoMapperLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/HasContentinfoMapperLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/InformationMapperLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/LabworkLjMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/MinfoMapperLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/NationinfoMapperLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/OccupationinfoMapperLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/PapersinfoMapperLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/ProveMapperLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/RegisteredinfoMapperLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/ResultMapperLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/ResulttypeMapperLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/SuggestinfoMapperLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/TherestMapperLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/UserMapperLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/ChecktypeinfoServiceLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/CompleteServiceLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/EducationinfoServiceLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/HasContentinfoServiceLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/InformationServiceLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/LabworkServiceLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/MinfoServiceLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/NationinfoServiceLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/OccupationinfoServiceLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/PapersinfoServiceLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/ProveServiceLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/RegisteredinfoServiceLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/ResultServiceLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/ResulttypeServiceLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/SuggestinfoServiceLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicelj/TherestSericeLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicezxz/NationinfoServiceImplLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicezxz/PapersinfoServiceImplLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-service/src/main/java/com/daji/servicezxz/TherestSericeImplLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImpllj/ChecktypeinfoServiceImplLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImpllj/CompleteServiceImplLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImpllj/EducationinfoServiceImplLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImpllj/HasContentinfoServiceImplLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImpllj/InformationServiceImplLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImpllj/LabworkServiceImplLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImpllj/MinfoServiceImplLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImpllj/OccupationinfoImplServiceLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImpllj/ProveServiceImplLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImpllj/RegisteredinfoServiceImplLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImpllj/ResultServiceImplLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImpllj/ResulttypeServiceImplLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImpllj/SuggestinfoServiceImplLJ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/java/com/daji/controllerlj/AddNewFileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/java/com/daji/controllerlj/CheckResultControllre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/java/com/daji/controllerlj/PremaritalmanController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/java/com/daji/controllerlj/SMSStatisticsTableConnroller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/java/com/daji/controllerlj/loginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/static/css/select.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/static/js/pca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/static/js/select.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/static/ljjs/SMSStatisticsTable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/static/ljjs/addNewFile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/templates/Premaritalman.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/templates/SMSStatisticsTable.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/templates/addNewFile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/templates/checkResult.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/templates/pgjydxsf.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Anamnesis.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Anamnesis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Checktypeinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Checktypeinfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Complete.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Complete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Educationinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Educationinfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/HasContentinfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Information.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Information.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Minfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Minfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Nationinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Nationinfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Occupationinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Occupationinfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Papersinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Papersinfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Prove.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Prove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Registeredinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Registeredinfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Resulttype.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Resulttype.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Suggestinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Suggestinfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Therest.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/Therest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/src/main/java/com/daji/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Anamnesis.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Anamnesis.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Checktypeinfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Checktypeinfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Complete.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Complete.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Educationinfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Educationinfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/HasContentinfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/HasContentinfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Information.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Information.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Minfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Minfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Nationinfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Nationinfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Note.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Note.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Occupationinfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Occupationinfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Papersinfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Papersinfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Prove.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Prove.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Registeredinfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Registeredinfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Result.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Resulttype.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Resulttype.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Suggestinfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Suggestinfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Therest.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/Therest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-api/target/classes/com/daji/pojo/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daocyh/LabworkMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daocyh/LabworkMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/Koqiang.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/java/com/daji/daolj/Koqiang.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-dao/src/main/resources/mapper/mapperlj/Koqiang.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-dao/src/main/resources/mapper/mapperlj/Koqiang.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-dao/target/classes/com/daji/daolj/Koqiang.class" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-dao/target/classes/com/daji/daolj/Koqiang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-dao/target/classes/mapper/mapperlj/Koqiang.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-dao/target/classes/mapper/mapperlj/Koqiang.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-dao/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-dao/target/pregnancytest-dao-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-dao/target/pregnancytest-dao-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImplcyh/LabworkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-serviceImpl/src/main/java/com/daji/serviceImplcyh/LabworkServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-web/src/main/java/com/daji/controllerlj/Lj.java" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/java/com/daji/controllerlj/Lj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/static/api/init.json" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/static/api/init.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/templates/addPremaritalSettings.html" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/templates/addPremaritalSettings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/templates/kouqiang.html" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/templates/kouqiang.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-web/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-web/target/classes/static/api/init.json" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-web/target/classes/static/api/init.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pregnancytest-web/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pregnancytest-web/target/classes/templates/login.html" afterDir="false" />
-    </list>
+    <list default="true" id="637377bf-5be0-4bd6-a201-e9fd0726c51c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -235,7 +112,16 @@
       <workItem from="1588006518540" duration="145000" />
       <workItem from="1588047896771" duration="22322000" />
       <workItem from="1588087889200" duration="175000" />
+      <workItem from="1588139573179" duration="289000" />
     </task>
+    <task id="LOCAL-00001" summary="lj2020-4-29">
+      <created>1588139821807</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588139821807</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +143,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="CYH首次提交" />
     <MESSAGE value="ZXZ首次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="ZXZ首次提交" />
+    <MESSAGE value="lj2020-4-29" />
+    <option name="LAST_COMMIT_MESSAGE" value="lj2020-4-29" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="25" key="#Project_Structure" timestamp="1588076268336">
@@ -277,11 +164,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1588002056151" />
-    <state x="318" y="0" key="CommitChangelistDialog2" timestamp="1588058991676">
+    <state x="318" y="0" key="CommitChangelistDialog2" timestamp="1588139869332">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587726800384" />
-    <state x="318" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588058991676" />
+    <state x="318" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588139869332" />
     <state width="451" height="466" key="DebuggerActiveHint" timestamp="1587917659726">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
