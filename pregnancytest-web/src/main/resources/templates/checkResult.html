@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>检查结果（女）</title>
+	</head>
+	
+		<link rel="stylesheet" type="text/css" href="/JsAndCss/bootstrap/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="/JsAndCss/css/new_file.css"/><!--[if IE]>
+		<![endif]-->
+
+		<script type="text/javascript" src="/JsAndCss/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/JsAndCss/bootstrap/js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="/JsAndCss/js/checkResult.js"></script>
+		<style>
+
+		</style>
+	
+	<body>
+	<input type="hidden" th:value="${session.tishi==null?'':session.tishi}" id="tishi"/>
+
+	<form action="insertandupdate" method="post">
+	
+		<div class="main2">
+			
+			<div class="content2">
+				
+				<div style="width: 99%; height: 90%;margin: auto;">
+						<table style="width: 100%;margin-top: 1%;">
+							<tr>
+								<td>系统编号：<input type="text" style="width: 70%;" id="id" readonly="readonly"/></td>
+								<td >人员姓名：<input type="text" style="width: 70%;" id="name" readonly="readonly"/></td>
+							</tr>
+						</table>
+					
+						<div style="height: 200px;background: white; margin-top: 1%;border: 1px solid #98BFEB;">
+							<table border="1" bordercolor="#98BFEB" id="qqqq"  class="table1" style="table-layout: fixed;width: 100%;margin: auto;">
+								<tr style="background: #AFCEF0;">
+									<td>序号</td>
+									<td>项目名称</td>
+									<td>项目</td>
+									<td>结果</td>
+									<td>单位</td>
+									<td>参考范围</td>
+									<td>备注</td>
+								</tr>
+								<tr th:each="l:${list}">
+									<td th:text="${l?.autoid}"></td>
+									<td th:text="${l?.workname}"></td>
+									<td th:text="${l?. work}"></td>
+									<td th:text="${l?. result}" style="overflow-hidden"></td>
+									<td th:text="${l?.unit}"></td>
+									<td th:text="${l?.scope}"></td>
+									<td th:text="${l?.remark}"></td>
+
+								</tr>
+							</table>
+						</div>
+				</div>
+		
+		
+				<div class="content3">
+						<div style="border: 1 solid #98BFEB ; background: #AFCEF0;border-top: none;border-left: none; border-right: none;">1.</div>
+						<div style="width: 99%;height: 99%;margin: auto;">
+							<table style="width: 100%;margin-top: 1%;">
+								<tr style="width: 100%;">
+									<td style="width: 8%;">检查结果：</td>
+									<td>
+										<table style="width: 100%;background: white;border: 1 solid #98BFEB;">
+											<tr>
+												<td style="width: 50%;"><input type="radio" name="check" th:checked="${r?.check==1}" value="1" class="radio1" onclick="check()"/>未见异常</td>
+												<td><input type="radio" name="check" value="2"   th:checked="${r?.check==2}" class="radio1" onclick="check()"/>存在异常情况，描述如下</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								
+								<tr>
+									<td style="height: 90px;">异常情况：</td>
+									<td><textarea style="width: 100%; overflow-y:scroll" rows="3" id="unusualText"  name="abnormal" th:text="${r?.abnormal}"></textarea></td>
+								</tr>
+								
+								<tr>
+									<td style="height: 60px;">疾病诊断：</td>
+									<td><textarea style="width: 100%; overflow-y:scroll" rows="3" id="sickText"  name="disease" th:text="${r?.disease}"></textarea></td>
+								</tr>
+							</table><br />
+						</div>
+					</div>
+			
+				<div class="content2"> 
+					<div style="width: 99%;height: 99%;margin: auto;">
+						<table style="width: 100%;margin-top: 1%;">
+							<tr>
+								<td width="4%">医学意见：</td>
+								<td>
+								<div class="col-lg-6"  th:each="l:${list1}" >
+									<div class="input-group" >
+										<span class="input-group-addon"><input type="checkbox" th:checked="${l?.newsid}"  th:value="${l?.sid}" class="checkbox" name="sid"/></span>
+										 <input type="text" class="form-control"  th:value="${l?.suggest}"
+											readonly="readonly" >
+
+									</div>
+								</div>
+
+								</td>
+							</tr>
+						</table>
+						
+
+						
+						<table style="line-height: 20px;width: 100%;margin-top: 1%;">
+							<tr>
+								<td width="15%">主检医生补充病史：</td>
+								<td><textarea style="width: 100%; overflow-y:scroll" rows="1" id="K1" th:text="${r?.replenish}" name="replenish"></textarea></td>
+							</tr>
+						</table>
+						<table style="line-height: 20px;width: 100%;margin-top: 1%;">
+							<tr>
+								<td width="15%">进一步检查建议：</td>
+								<td style="text-align: left;">
+									<select style="width: 90%;" id="K2" name="advice" >
+										<option value="1" >不需要进一步检查</option>
+										<option value="2">本院进一步检查</option>
+										<option value="3">外医院进一步检查</option>
+									</select>
+								</td>
+								<td width="15%">建议检查项目：</td>
+								<td style="text-align: right;"><textarea style="width: 100%; overflow-y:scroll" rows="1" id="K3"  name="inspectionitem" th:text="${r?.inspectionitem}"></textarea></td>
+							</tr>
+						</table>
+						<table  style="width: 100%;margin-top: 1%;">
+							<tr style="width: 100%;">
+									<td style="width: 23%;">婚检对象对进一步检查建议的态度：</td>
+									<td>
+										<table style="width: 100%;background: white;border: 1 solid #98BFEB;">
+											<tr>
+												<td style="width: 50%;"><input type="radio" name="manner" th:checked="${r?.manner==1}" class="K4" value="1"/>接受</td>
+												<td><input type="radio"name="manner" th:checked="${r?.manner==2}" class="K4" value="2"/>拒绝</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+						</table>
+						
+
+						<table style="line-height: 20px;width: 100%;margin-top: 1%;">
+							<tr>
+								<td width="10%">预约复诊日期：</td>
+								<td style="text-align: left;"><input type="date" style="width: 92%;" id="ComeBackDate" class="cleantext" name="returndate" th:value="${#dates.format(r?.returndate,'yyyy-MM-dd')}"/></td>
+							</tr>
+						</table>
+						<table style="line-height: 20px;width: 100%;margin-top: 1%;">
+							<tr>
+								<td width="10%">主诊医生签名：</td>
+								<td style="text-align: left;">
+								<td ><input type="text" th:value="${c?.doctorname}" name="doctorname"></td>
+								</td>
+								<td width="8%" style="text-align: right;">检查日期：</td>
+								<td style="text-align: right;"><input type="date" style="width: 97%;" id="checkdate" class="cleantext" name="creaedata" th:value="${#dates.format(r?.creaedata,'yyyy-MM-dd')}"/></td>
+							</tr>
+						</table>
+						<br />
+						<p style="text-align: right;">
+							<input type="submit" value="保存" class="btn btn-info">
+							<button type="button" class="btn btn-info" onclick="delche()">删除</button>
+							<button type="button" class="btn btn-info">打印</button>
+							<button type="button" class="btn btn-info" onclick="clean()">重置</button>
+						</p>
+					</div>
+				</div>	
+			</div><br/>
+		</div>
+	</form>
+	</body>
+	<script src="/laydate/laydate.js"></script>
+	<script type="text/javascript">
+	//执行一个laydate实例
+	laydate.render({
+			  elem: '#checkdate' //指定元素
+			});
+			laydate.render({
+				  elem: '#ProvideDate' //指定元素
+				});
+			laydate.render({
+				  elem: '#ComeBackDate' //指定元素
+				});
+			laydate.render({
+				  elem: '#ChangeHospitalDate' //指定元素
+				});
+			function f() {
+
+			}
+
+			function delche() {
+				$.ajax({
+					type:"post",
+					url:"shanchu",
+					data:{},
+					dataType:"text",
+					success:function(result){
+						if(result=='true'){
+							alert("删除功");
+
+						}else{
+							alert("删除失败");
+						}
+					}
+				})
+			}
+
+	$(function(){
+
+		var tishi = $("#tishi").val();
+		if(tishi!=''){
+			alert(tishi);
+		}
+	})
+	</script>
+</html>

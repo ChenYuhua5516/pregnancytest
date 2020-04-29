@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>婚前医学检查证明(男)</title>
+	<link rel="stylesheet" type="text/css" href="JsAndCss/bootstrap/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="/JsAndCss/css/df.css"/><!--[if IE]>
+	<![endif]-->
+	<script type="text/javascript" src="/JsAndCss/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/JsAndCss/bootstrap/js/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="/JsAndCss/js/Premaritalwoman.js"></script>
+</head>
+
+<body>
+
+<div id="main">
+	<table style="width: 60%;float:left;" class="table"  >
+		<tr >
+			<td class="tdsmall">
+				<div class="col-lg-6">
+					<div class="input-group">
+						<span class="input-group-addon">系统编号： </span>
+						<input type="text" readonly="readonly" class="form-control" id="ID" name="ID">
+					</div>
+				</div>
+			</td>
+
+
+
+		</tr>
+		<tr>
+			<td class="tdsmall">
+				<div class="col-lg-6">
+					<div class="input-group">
+						<span class="input-group-addon">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名： </span>
+						<input type="text" name="fname" readonly="readonly" class="form-control" id="fname">
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="tdsmall">
+				<div class="col-lg-6">
+					<div class="input-group">
+						<span class="input-group-addon">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别： </span>
+						<input type="text" class="form-control"  readonly="readonly" id="sex" name="fidCard">
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="tdsmall">
+				<div class="col-lg-6">
+					<div class="input-group">
+						<span class="input-group-addon">对方姓名： </span>
+						<input type="text" class="form-control" readonly="readonly" id="mname" name="fbirthDate">
+					</div>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="tdsmall">
+				&nbsp;&nbsp;&nbsp;直系、三代内旁系血亲关系 <span id="intermarry"></span>
+			</td>
+		</tr>
+	</table>
+
+	<table style="float:left;width: 40%;">
+		<tr>
+			<td>
+				<div class="panel-body" style="width: 200px; height: 183px;margin:3% 20%">
+					<img id="headimg" style="width: 100%; height: 100%;">
+				</div>
+			</td>
+		</tr>
+	</table>
+	<form action="Premaritalmanxz" method="post">
+	<div style="padding: 23% 0px 0px 0px">
+		<div class="panel panel-info divnext" >
+			<div class="panel-heading">
+				<h3 class="panel-title">婚前医学检查结果</h3>
+			</div>
+			<table width="100%" class="othertable">
+				<tr class="trcss">
+					<td class="tdsmall">
+						<div class="col-lg-6">
+							<div class="input-group">
+                    <span class="input-group-addon">
+                     <input type="radio" name="check" value="1" th:checked="${r?.check==1}" onclick="checkradio()" ></span>
+								<input type="text"  class="form-control" readonly="readonly" value="未见异常">
+							</div>
+						</div>
+					</td>
+					<td class="tdsmall">
+						<div class="col-lg-6">
+							<div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="radio" name="check" value="2" th:checked="${r?.check==2}" onclick="checkradio()"></span>
+								<input type="text" class="form-control"readonly="readonly" value="存在异常情况，描述如下">
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+			<div class="panel-body">
+				<textarea style="border:1px solid powderblue;" id="yic"></textarea>
+			</div>
+		</div>
+
+		<input type="hidden" th:value="${session.tishi==null?'':session.tishi}" id="tishi"/>
+
+		<div class="panel panel-info divnext" >
+			<div class="panel-heading">
+				<h3 class="panel-title">医学意见</h3>
+			</div>
+			<div class="panel-body">
+				<table class="othertable">
+					<tr th:each="l:${list}">
+						<td>
+							<div class="col-lg-6">
+								<div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" class="lastcheck" th:checked="${l?.newsid}"  name="sid" th:value="${l.sid}"></span>
+									<input type="text" class="form-control"readonly="readonly" th:value="${l.suggest}">
+								</div>
+							</div>
+						</td>
+					</tr>
+
+
+				</table>
+			</div>
+		</div>
+
+		<table border="0" class="table" cellspacing="" cellpadding="" width="100%">
+			<tr style="text-align: center;">
+				<td class="tdsmall">
+					<input type="submit" value="保存" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+
+	</form>
+					<button type="button" id="myButton2" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off" onclick="clean()">
+						重置
+					</button>
+					<button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+						打印预览
+					</button>
+
+				</td>
+			</tr>
+		</table>
+
+	</div>
+
+</div>
+<script >
+	$(function(){
+
+		var tishi = $("#tishi").val();
+		if(tishi!=''){
+			alert(tishi);
+		}
+	})
+</script>
+</body>
+</html>

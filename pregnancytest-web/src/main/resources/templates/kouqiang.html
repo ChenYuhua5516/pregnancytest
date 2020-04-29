@@ -13,26 +13,27 @@
 		<script type="text/javascript" src="/JsAndCss/js/kouqiang.js"></script>
 	<body>
 		<form action="kouqiangAdd" method="post">
+			<input type="hidden" th:value="${session.tishi==null?'':session.tishi}" id="tishi"/>
 		<div id="dd1">
 			系统编号: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="id" readonly="readonly" />
 			姓名: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="name" readonly="readonly"/><br /><br />
 			<div id="vv1">
 				<div id="oo1"> 口腔检查<hr /></div>
-				检查设备: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" style="width: 570px;" id="shebei" name="facility" th:value="${list.facility}"/><br /><br />
+				检查设备: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" style="width: 570px;" id="shebei" name="facility" th:value="${list?.facility}"/><br /><br />
 				<table>
 					<tr>
 						<td>检查所见: &nbsp;&nbsp;&nbsp;</td>
 						<td>
-							<textarea style="width: 550px; height: 100px;resize: none;" id="checkShow" name="finding" th:text="${list.finding}"></textarea>
+							<textarea style="width: 550px; height: 100px;resize: none;" id="checkShow" name="finding" th:text="${list?.finding}"></textarea>
 						</td>
 					</tr>
 				</table>
-				<input type="radio" class="checktext" value="1" name="check" th:checked="${list.check==1}" onclick="check()"/>检查正常，未发现特殊情况<br /><br />
-				<input type="radio" class="checktext" name="check" value="2" th:checked="${list.check==2}"  onclick="check()"/>异常，描述如下：<br /><br />
-				<textarea style="width: 666px; height: 100px;resize: none;" id="endtext" name="abnormal" th:text="${list.abnormal}"></textarea><br /><br />
+				<input type="radio" class="checktext" value="1" name="check" th:checked="${list?.check==1}" onclick="check()"/>检查正常，未发现特殊情况<br /><br />
+				<input type="radio" class="checktext" name="check" value="2" th:checked="${list?.check==2}"  onclick="check()"/>异常，描述如下：<br /><br />
+				<textarea style="width: 666px; height: 100px;resize: none;" id="endtext" name="abnormal" th:text="${list?.abnormal}"></textarea><br /><br />
 				<span id="pp1">
-					放射科医师签名:<input type="text" name="doctorname" th:value="${list1.doctorname}">
-					检查时间:<input type="date" id="checkdate" name="createdate" th:value="${#dates.format(list1.createdate,'yyyy-MM-dd')}"/>
+					放射科医师签名:<input type="text" name="doctorname" th:value="${list1?.doctorname}">
+					检查时间:<input type="date" id="checkdate" name="createdate" th:value="${#dates.format(list1?.createdate,'yyyy-MM-dd')}"/>
 				</span>
 			</div>
 			<br />
@@ -40,12 +41,18 @@
 		</div>
 		</form>
 	</body>
-	<script src="${pageContext.request.contextPath}/laydate/laydate.js"></script> 
+	<script src="/laydate/laydate.js"></script>
 	<script type="text/javascript">
 	//执行一个laydate实例
 	laydate.render({
 			  elem: '#checkdate' //指定元素
 			});
-	
+	$(function(){
+
+		var tishi = $("#tishi").val();
+		if(tishi!=''){
+			alert(tishi);
+		}
+	})
 	</script>
 </html>

@@ -1,5 +1,7 @@
 package com.daji.pojo;
 
+import java.util.Date;
+
 /**
  * note短信表
  */
@@ -12,7 +14,15 @@ public class Note {
     private Integer whether;//是否发送成功 1：是 2：否
 
     private Integer source;//短信来源：1：医生发给受检人 2：受检人回复医生
+    private Date sendtime;
 
+    public Date getSendtime() {
+        return sendtime;
+    }
+
+    public void setSendtime(Date sendtime) {
+        this.sendtime = sendtime;
+    }
 
     public Integer getAutoId() {
         return autoId;

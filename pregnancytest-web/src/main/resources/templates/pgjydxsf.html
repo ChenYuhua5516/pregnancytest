@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>评估建议短信随访</title>
+	</head>
+	<style>
+		.modal-body textarea{width:100%; height: 100px; resize: none; border: 0px; border-radius: 5px; outline:none;}
+			/*
+			  * 外面盒子样式---自己定义
+			  */
+			
+			.page_div {
+				margin-top: 20px;
+				margin-bottom: 20px;
+				font-size: 15px;
+				font-family: "microsoft yahei";
+				color: #666666;
+				margin-right: 10px;
+				padding-left: 20px;
+				box-sizing: border-box;
+			}
+			/*
+			 * 页数按钮样式
+			 */
+			
+			.page_div a {
+				min-width: 30px;
+				height: 28px;
+				border: 1px solid #dce0e0!important;
+				text-align: center;
+				margin: 0 4px;
+				cursor: pointer;
+				line-height: 28px;
+				color: #666666;
+				font-size: 13px;
+				display: inline-block;
+			}
+			
+			#firstPage,
+			#lastPage {
+				width: 50px;
+				color: #0073A9;
+				border: 1px solid #0073A9!important;
+			}
+			
+			#prePage,
+			#nextPage {
+				width: 70px;
+				color: #0073A9;
+				border: 1px solid #0073A9!important;
+			}
+			
+			.page_div .current {
+				background-color: #0073A9;
+				border-color: #0073A9;
+				color: #FFFFFF;
+			}
+			
+			.totalPages {
+				margin: 0 10px;
+			}
+			
+			.totalPages span,
+			.totalSize span {
+				color: #0073A9;
+				margin: 0 5px;
+			}
+			#xiala{
+				position: absolute;
+				top:150px;
+				left:120px;
+			}
+		</style>
+	<link rel="stylesheet" href="/layui/css/layui.css">
+	<script type="text/javascript" src="/layui/layui.js"></script>
+	<link rel="stylesheet" type="text/css" href="/JsAndCss/bootstrap/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="/JsAndCss/css/assessmenTrecommendsFollowup.css"/>
+	<script type="text/javascript" src="/JsAndCss/js/jquery.min.js" ></script>
+	<script type="text/javascript" src="/JsAndCss/bootstrap/js/bootstrap.min.js" ></script>
+	<!--<script type="text/javascript" src="statics/JsAndCss/js/atfuTable.js" ></script>
+	<script type="text/javascript" src="statics/JsAndCss/js/paging.js"></script>-->
+	<style type="text/css">
+		body{font-family: "微软雅黑";}
+		textarea{height: 25px; width: 250px; resize: none;border: 0px; outline: none;}
+		table th{text-align: center; white-space: nowrap; text-overflow: ellipsis;}
+		table tr{text-align: center; white-space: nowrap; text-overflow: ellipsis;}
+		table .tr:hover{background-color: #DFF0D8;}
+	</style>
+	<script type="text/javascript">
+	layui.use('laydate', function(){
+		  var laydate = layui.laydate;
+		  //执行一个laydate实例
+		  laydate.render({
+		    elem: '#qs' //指定元素
+		  });
+		});
+	 layui.use('laydate', function(){
+		  var laydate = layui.laydate;
+		  //执行一个laydate实例
+		  laydate.render({
+		    elem: '#js' //指定元素
+		  });
+		});
+	</script>
+	<body>
+		<div class="panel panel-default">
+			  <div class="panel-heading">
+			  	<form action="" method="post">
+			  		<table class="table" border="0" cellspacing="" cellpadding="">
+				  			<tr>
+				  				<td colspan="4"><div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">受检人编号： </span>
+  <input type="text" class="form-control" placeholder="请输入" aria-describedby="basic-addon1">
+</div></td>
+				  				<td colspan="4"><div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">风险类型： </span>
+  <select class="form-control"  aria-describedby="basic-addon1" id="fx">
+  	<option value="">--请选择--</option>
+  	<option value="0">无风险</option>
+  	<option value="1">女方有风险</option>
+  	<option value="2">男方有风险</option>
+  	<option value="3">双方有风险</option>
+  </select>
+  
+</div></td>
+								<td colspan="4"></td>
+				  			</tr>
+				  			<tr>
+				  				<td colspan="4"><div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">创建时间  从： </span>
+  <input type="text" class="layui-input" placeholder="请输入" aria-describedby="basic-addon1" id="qs">
+</div>
+				  				</td>
+								<td colspan="4"><div class="input-group" ><span class="input-group-addon"id="basic-addon1">至： </span><input type="text" class="layui-input" placeholder="请输入" aria-describedby="basic-addon1" id="js">
+				  			</div> 
+				  				</td>
+				  				<td>
+				  					<button type="button" class="btn btn-info" onclick="chax()">查询</button>
+					  				<button type="button" class="btn btn-warning" onclick="fason()">发送短信</button>
+					  				<button type="reset" class="btn btn-success" onclick="qingkong()">清空</button>
+					  				<!-- <a href=""><button type="button" class="btn btn-danger">返回</button></a> -->
+				  				</td>
+				  			</tr>
+				  		</table>
+				  		</form>
+			  </div>
+			  <div class="panel panel-info">
+				  <!-- Default panel contents -->
+				  <div class="panel-heading">评估建议短信随访</div>
+				  <!-- Table -->
+				  <table class="table" id="tr1">
+				    	<tr>
+			  				<th class="sid">档案编号</th>
+			  				<th class="name">姓名</td>
+			  				<th class="id">身份证号</td>
+			  				<th class="age">年龄</td>
+			  				<th class="date">出生日期</td>
+			  				<th class="addr">评估内容</td>
+			  				<th class="phone">手机号码</td>
+			  				<!--  
+			  				<th class="A">是否发送</td>
+			  				<th class="B">是否成功</td>
+			  				<th class="datetime">发送时间</td>
+			  				-->
+			  			</tr>
+			  			<!--  <tr class="tr">
+			  				<td class="sid">1</td>
+			  				<td class="name">小明</td>
+			  				<td class="id">430581199703276515</td>
+			  				<td class="age">19</td>
+			  				<td class="date">2017-12-12</td>
+			  				<td class="addr"><textarea id="addrtext" data-toggle="tooltip" data-placement="top" name="" rows="" cols="" readonly></textarea></td>
+			  				<td class="phone">15580799771</td>
+			  				<td class="A">是</td>
+			  				<td class="B">否</td>
+			  				<td class="datetime">2017-12-12</td>
+			  			</tr>
+			  			-->
+				  </table>
+				</div>
+				<div value="1 0"></div>
+						<div id="page" class="page_div"></div>
+						
+						<!-- Modal2 -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">修改评估建议内容</h4>
+			      </div>
+			      <div class="modal-body">
+			        	<textarea name="" id="textarea" placeholder="修改评估建议内容"></textarea>
+			      </div>
+			      <div class="modal-footer">
+			        <!-- <button type="button" class="btn btn-primary" onclick="update()" >确定修改</button> -->
+			      	<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+	</body>
+</html>

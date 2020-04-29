@@ -1,11 +1,17 @@
 package com.daji.pojo;
 
+import javax.persistence.*;
+
 /**
  * suggestinfo最终结果表
  *
  */
+@Table(name = "suggestinfo")
 public class Suggestinfo {
-    private Integer autoId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer autoid;
+    @Column(name = "`mid`")
     private  String mid;//受检人编号(外)
 
     private  Integer sid;//resulttype结果建议表中有的id
@@ -13,12 +19,12 @@ public class Suggestinfo {
     private Integer sex;//1：男2：女
 
 
-    public Integer getAutoId() {
-        return autoId;
+    public Integer getAutoid() {
+        return autoid;
     }
 
-    public void setAutoId(Integer autoId) {
-        this.autoId = autoId;
+    public void setAutoid(Integer autoid) {
+        this.autoid = autoid;
     }
 
     public String getMid() {

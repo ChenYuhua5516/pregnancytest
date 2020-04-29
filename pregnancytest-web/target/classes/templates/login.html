@@ -82,7 +82,7 @@ window.onload=function(){
             <p class="prefix"></p>
 
             <div class="layui-form-item">
-                <button type="button" class="layui-btn layui-col-sm12" onclick="login();" lay-filter="formSubmit">登录</button>
+                <button type="button" class="layui-btn layui-col-sm12" onclick="login()" lay-filter="formSubmit">登录</button>
             </div>
         </div>
         <br>
@@ -103,6 +103,7 @@ function keyLogin(e){
 	   }
 	  }
 function login(){
+
 	 var name=$("#uname").val();	
 	 var pwd=$("#pwd").val();
 	    	$.post("login.action",{UName:name,UPwd:pwd},function(data){
@@ -125,6 +126,32 @@ function login(){
         <option value="{{ item.UName }}">{{item.UID}} | {{item.UName}}</option>
         {{# });}}
     </select>
+</script>
+<script>
+    function login() {
+        var uname=$("#user").val();
+        var upwd=$("#pwd").val();
+        if (uname==null || uname==''){
+            alert("用户名不能为空");
+        }else if (upwd==null || upwd==''){
+            alert("密码不能为空");
+        }else {
+        $.ajax({
+            type:"post",
+            data:{"uname":uname,"upwd":upwd},
+            url:"dl",
+            dataType:"text",
+            success:function(result){
+                if(result=='true'){
+                    alert("登录成功");
+                    location.href="index";
+                }else{
+                   alert("登录失败");
+                }
+            }
+        })
+        }
+    }
 </script>
 <script type="text/javascript" src="/layui/layui.js"></script>
 <script type="text/javascript" src="/js/login.js"></script>

@@ -1,18 +1,24 @@
 package com.daji.pojo;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * 学历表
  */
 public class Educationinfo {
-    private Integer eId;//自增
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer eid;//自增
     private String education;//学历名称
 
-    public Integer geteId() {
-        return eId;
+    public Integer getEid() {
+        return eid;
     }
 
-    public void seteId(Integer eId) {
-        this.eId = eId;
+    public void setEid(Integer eid) {
+        this.eid = eid;
     }
 
     public String getEducation() {
@@ -26,7 +32,7 @@ public class Educationinfo {
     @Override
     public String toString() {
         return "Educationinfo{" +
-                "eId=" + eId +
+                "eId=" + eid +
                 ", education='" + education + '\'' +
                 '}';
     }

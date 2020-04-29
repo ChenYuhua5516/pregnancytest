@@ -19,4 +19,42 @@ update oralcavity set facility=#{facility},finding=#{finding},`check`=#{check},a
     <select id="hjxmcx" resultType="Projecttype">
 select * from projecttype where typename=#{typename}
 </select>
+
+
+
+
+    <select id="tjcx" resultType="Smsstatiscstable">
+        SELECT n.`sendtime` sendtime,n.`whether` whether,n.`message` message,m.`fname` fname,m.`fcellphonenum` fcellphonenum,i.`fidcard` fidcard,m.mid `mid` FROM information i,minfo  m,note n where n.mid=m.mid and m.mid=i.mid and i.mid=n.mid
+
+        <if test="whether!=null and whether!=0">
+            and n.whether=#{whether}
+        </if>
+        <if test="kaishi!=null">
+
+            and n.sendtime&gt;=#{kaishi}
+        </if>
+        <if test="jieshu!=null">
+            and n.sendtime&lt;=#{jieshu}
+        </if>
+        ORDER BY n.`sendtime` DESC
+       limit #{pageNum},#{pageSize}
+    </select>
+    <select id="tjcxSize" resultType="int">
+        SELECT count(*) FROM information i,minfo  m,note n where n.mid=m.mid and m.mid=i.mid and i.mid=n.mid
+
+        <if test="whether!=null and whether!=0">
+            and n.whether=#{whether}
+        </if>
+        <if test="kaishi!=null">
+
+            and n.sendtime&gt;=#{kaishi}
+        </if>
+        <if test="jieshu!=null">
+            and n.sendtime&lt;=#{jieshu}
+        </if>
+
+    </select>
+    <select id="denglucx" resultType="User">
+        select * from User where uname=#{uname} and upwd=#{upwd}
+    </select>
 </mapper>

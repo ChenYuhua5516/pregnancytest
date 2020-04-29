@@ -1,9 +1,15 @@
 package com.daji.pojo;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * 户口表
  */
 public class Registeredinfo {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer rid;//主键，自增
     private String registered;//户口名称
 

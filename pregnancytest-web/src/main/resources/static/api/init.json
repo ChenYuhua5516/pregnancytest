@@ -43,7 +43,7 @@
           "child": [
             {
               "title": "新建档案",
-              "href": "addNewFile.html",
+              "href": "addNewFilecx",
               "icon": "fa fa-list-alt",
               "target": "_self"
             }
@@ -135,13 +135,13 @@
           "child": [
             {
               "title": "婚前医学检查证明(女)",
-              "href": "Premaritalwoman.html?v=1",
+              "href": "Premaritalmancx?sex=2",
               "icon": "fa fa-calendar",
               "target": "_self"
             },
             {
               "title": "婚前医学检查证明(男)",
-              "href": "Premaritalman.html?v=1",
+              "href": "Premaritalmancx?sex=1",
               "icon": "fa fa-calendar",
               "target": "_self"
             }
@@ -167,14 +167,14 @@
             },
             {
               "title": "口腔检查",
-              "href": "kouqiang.html?v=1",
+              "href": "kouqiang1?sex=2",
               "icon": "fa fa-calendar",
               "target": "_self"
             },
 
             {
               "title": "检查结果",
-              "href": "checkResult.html?v=1",
+              "href": "Labworkcx?sex=2",
               "icon": "fa fa-calendar",
               "target": "_self"
             }
@@ -200,13 +200,13 @@
             },
             {
               "title": "口腔检查",
-              "href": "kouqiangnan.html?v=1",
+              "href": "kouqiang1?sex=1",
               "icon": "fa fa-calendar",
               "target": "_self"
             },
             {
               "title": "检查结果",
-              "href": "checkResultnan.html?v=1",
+              "href": "Labworkcx?sex=1",
               "icon": "fa fa-calendar",
               "target": "_self"
             }

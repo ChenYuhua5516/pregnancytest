@@ -1,9 +1,12 @@
 package com.daji.pojo;
 
+import javax.persistence.Id;
+
 /**
  * 证件类型
  */
 public class Papersinfo {
+    @Id
     private Integer pid;//主键，自增
     private String papers;//证件类型
 

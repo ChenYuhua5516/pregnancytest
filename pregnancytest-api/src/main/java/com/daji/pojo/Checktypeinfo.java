@@ -1,9 +1,12 @@
 package com.daji.pojo;
 
+import javax.persistence.Id;
+
 /**
  * 检查类型
  */
 public class Checktypeinfo {
+    @Id
     private Integer cid;//主键，自增
     private String checktype;//同意人类型
 

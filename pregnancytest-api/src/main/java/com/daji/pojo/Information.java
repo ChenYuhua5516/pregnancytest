@@ -1,12 +1,17 @@
 package com.daji.pojo;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+
 /**
  * 受检人证件信息
  */
 public class Information {
+    @Id
+    @Column(name = "`mid`")
     private String mid;//受检人编号 日期 + 5位流水号
-    private String midCard;//男方身份证号
-    private String fidCard;//女方身份证号
+    private String midcard;//男方身份证号
+    private String fidcard;//女方身份证号
     private String mimg;//男方证件照
     private String fimg;//女方证件照
     private Integer mnationality;//男民族(民族表外键)
@@ -22,20 +27,20 @@ public class Information {
         this.mid = mid;
     }
 
-    public String getMidCard() {
-        return midCard;
+    public String getMidcard() {
+        return midcard;
     }
 
-    public void setMidCard(String midCard) {
-        this.midCard = midCard;
+    public void setMidcard(String midcard) {
+        this.midcard = midcard;
     }
 
-    public String getFidCard() {
-        return fidCard;
+    public String getFidcard() {
+        return fidcard;
     }
 
-    public void setFidCard(String fidCard) {
-        this.fidCard = fidCard;
+    public void setFidcard(String fidcard) {
+        this.fidcard = fidcard;
     }
 
     public String getMimg() {
@@ -86,18 +91,5 @@ public class Information {
         this.herpid = herpid;
     }
 
-    @Override
-    public String toString() {
-        return "Information{" +
-                "mid='" + mid + '\'' +
-                ", midCard='" + midCard + '\'' +
-                ", fidCard='" + fidCard + '\'' +
-                ", mimg='" + mimg + '\'' +
-                ", fimg='" + fimg + '\'' +
-                ", mnationality=" + mnationality +
-                ", fnationality=" + fnationality +
-                ", hirpid=" + hirpid +
-                ", herpid=" + herpid +
-                '}';
-    }
+
 }

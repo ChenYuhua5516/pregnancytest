@@ -1,11 +1,13 @@
 package com.daji.pojo;
 
+import javax.persistence.Id;
 import java.util.Date;
 
 /**
  * 用户
  */
 public class User {
+    @Id
     private Integer uid;//主键
     private String uname;//用户名
     private String upwd;//用户密码

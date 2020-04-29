@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>已发短信统计表</title>
+	</head>
+	<link rel="stylesheet" href="/JsAndCss/jquerys/smsTable.js" />
+	<script src="/laydate/laydate.js"></script>
+	<link rel="stylesheet" href="/JsAndCss/css/SMSStatisticsTable.css" />
+	<link rel="stylesheet" href="/JsAndCss/bootstrap/css/bootstrap.css" />
+	<script type="text/javascript" src="/JsAndCss/js/jquery.min.js" ></script>
+	<script type="text/javascript" src="/JsAndCss/bootstrap/js/bootstrap.min.js" ></script>
+
+	<link rel="stylesheet" href="/lay/css/layui.css"  media="all">
+
+	<script type="text/javascript" src="/lay/layui.js"></script>
+<script type="text/javascript" src="/ProductWins/bootstrap/js/bootstrap.min.js" ></script>
+
+	<script type="text/javascript" src="/ljjs/SMSStatisticsTable.js" ></script>
+
+	<script type="text/javascript">
+	
+
+	</script>
+	
+	<body>
+		<div id="sms">
+			<form  method="post">
+			<div id="sms1">
+				条件选择
+			</div>
+			<div id="sms2">
+				<div class="input-group" style="margin-top:10px;">
+					<span class="input-group-addon" >发送开始日期：</span>
+					<input type="text" name="kaishi" id="beginServiceTime" class="form-control" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group" style="margin-top:20px;">
+					<span class="input-group-addon" >发送结束日期：</span>
+					<input  type="text" name="jieshu" id="endServiceTime" class="form-control" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group" style="margin-top:20px;">
+					<span class="input-group-addon" >发&nbsp;送&nbsp;结&nbsp;果&nbsp;：&nbsp;&nbsp;</span>
+					<select name="whether" class="form-control" id="whether" aria-describedby="basic-addon1">
+						<option value="0">全部</option>
+						<option value="1">发送是否成功</option>
+						<option value="2">发送是否失败</option>
+					</select>
+				</div>
+	
+			<div id="sms3">
+				功能
+			</div>
+			<div id="sms4">
+				<div class="text-right">
+					<button type="button" id="bth" class="btn btn-info">查询</button>
+					<button type="button" id="dy" class="btn btn-info">打印浏览</button>
+				<!-- <button type="button" class="btn btn-default btn-lg active">返回</button> -->
+				</div>
+			</div>
+			</form>
+			<div id="sms5">
+				结果显示
+			</div>
+			<div id="sms6">
+				<table class="layui-hide" id="test"  lay-filter="test" width="100%"></table>
+				<table id="tab" class="table table-hover">
+	    		<tr id="tab1">
+					<td align="center">编号</td>
+					<td align="center">姓名</td>
+					<td align="center">身份证号</td>
+					<td align="center">电话号码</td>
+					<td align="center">发送内容 </td>
+					<td align="center">发送日期</td>
+					<td align="center">发送次数</td>
+					<td align="center">是否成功 </td>
+			    </tr>
+
+
+	    	</table>
+
+			</div>
+		</div>	
+	</body>
+
+				<script type="text/javascript">
+
+			      function dayin(){ 
+			       window.open("/examines/dayinmoban/WifePhysiqueCheck.jsp")
+			      }
+			    	
+				</script>
+</html>

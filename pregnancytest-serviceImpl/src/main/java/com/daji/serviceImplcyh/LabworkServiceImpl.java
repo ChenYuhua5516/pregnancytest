@@ -23,8 +23,8 @@ public class LabworkServiceImpl implements LabworkService {
         return labworkMapper.selectOne(labwork);
     }
 
-    public List<Labwork> findLabWorkBymidAndSex(Labwork labwork) {
-        return labworkMapper.select(labwork);
+        public List<Labwork> findLabWorkBymidAndSex(Labwork labwork) {
+            return labworkMapper.select(labwork);
     }
 
     public List<Labwork> findLabWorkBymidAndSexlimit(String mid,Integer sex, Integer pageNum, Integer pageSize)
@@ -37,11 +37,11 @@ return list;
     public int addLabwork(Labwork labwork) {
         return labworkMapper.insert(labwork);
     }
-
+//根据主键修改，空的不修改
     public int updateLabworkById(Labwork labwork) {
         return labworkMapper.updateByPrimaryKeySelective(labwork);
     }
-
+//根据主键删除
     public int deleteLabWorkById(Integer autoid) {
         return labworkMapper.deleteByPrimaryKey(autoid);
     }

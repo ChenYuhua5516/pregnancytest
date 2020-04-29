@@ -1,12 +1,22 @@
 package com.daji.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
 
 /**
  * 其他信息
  */
 public class Therest {
-    private Integer autoId;//自增
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer autoid;//自增
+    @Column(name = "`mid`")
     private String mid;//受检人编号(外)
     private Integer hereid;//学历表id(女)（外）
     private Integer heroid;//职业表id(女)（外）
@@ -15,17 +25,19 @@ public class Therest {
     private Integer hireid;//学历表id(男)（外）
     private Integer hiroid;//职业表id(男)（外）
     private Integer hirrid;//户口表id(男)（外）
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date mtime;//结婚时间
     private Integer hid;//知情同意书表（外）
     private Integer cid;//检查类型表（外）
     private String address;//家庭地址
 
-    public Integer getAutoId() {
-        return autoId;
+    public Integer getAutoid() {
+        return autoid;
     }
 
-    public void setAutoId(Integer autoId) {
-        this.autoId = autoId;
+    public void setAutoid(Integer autoid) {
+        this.autoid = autoid;
     }
 
     public String getMid() {
@@ -119,7 +131,7 @@ public class Therest {
     @Override
     public String toString() {
         return "Therest{" +
-                "autoId=" + autoId +
+                "autoId=" + autoid +
                 ", mid='" + mid + '\'' +
                 ", hereid=" + hereid +
                 ", heroid=" + heroid +

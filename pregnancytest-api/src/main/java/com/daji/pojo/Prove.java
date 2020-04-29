@@ -1,19 +1,25 @@
 package com.daji.pojo;
 
+import javax.persistence.*;
+
 /**
  * 婚前医学检查证明男女
  */
+@Table(name = "prove")
 public class Prove {
-    private Integer autoId;//主键
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer autoid;//主键
+    @Column(name = "`mid`")
     private String mid;//受检人编号(外)
     private Integer sex;//1：男2：女
 
-    public Integer getAutoId() {
-        return autoId;
+    public Integer getAutoid() {
+        return autoid;
     }
 
-    public void setAutoId(Integer autoId) {
-        this.autoId = autoId;
+    public void setAutoid(Integer autoid) {
+        this.autoid = autoid;
     }
 
     public String getMid() {
@@ -35,7 +41,7 @@ public class Prove {
     @Override
     public String toString() {
         return "Prove{" +
-                "autoId=" + autoId +
+                "autoId=" + autoid +
                 ", mid='" + mid + '\'' +
                 ", sex=" + sex +
                 '}';

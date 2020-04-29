@@ -1,9 +1,15 @@
 package com.daji.pojo;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * 职业表
  */
 public class Occupationinfo {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer oid;//自增
     private String occupation;//职业名称
 

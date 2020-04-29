@@ -4,10 +4,18 @@ package com.daji.pojo;
  *
  */
 
-import java.sql.Date;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.persistence.*;
+import java.util.Date;
+
+@Table(name = "result")
 public class Result {
-	private Integer autoId;//��������
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer autoid;//��������
+	@Column(name = "`check`")
 	private Integer check;//������ 1��������� 2�������쳣���
 	private String abnormal;//�쳣��Ϣ
 	private String disease;//�߲����
@@ -16,16 +24,24 @@ public class Result {
 	private Integer advice;//��齨�� 1:����Ҫ  2����Ժ��һ�����  
 	private String inspectionitem;// ��������Ŀ
 	private Integer manner;//�Խ�һ����齨���̬��1������ 2���ܾ�
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Date returndate;//	ԤԼ��������
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	private Date creaedata;// �������
+	@Column(name = "`mid`")
 	private String mid;//�ܼ��˱��(��)
 	private Integer sex;//1����2��Ů 
-	public Integer getAutoId() {
-		return autoId;
+
+	public Integer getAutoid() {
+		return autoid;
 	}
-	public void setAutoId(Integer autoId) {
-		this.autoId = autoId;
+
+	public void setAutoid(Integer autoid) {
+		this.autoid = autoid;
 	}
+
 	public Integer getCheck() {
 		return check;
 	}
@@ -100,7 +116,7 @@ public class Result {
 	}
 	@Override
 	public String toString() {
-		return "Result [autoId=" + autoId + ", check=" + check + ", abnormal=" + abnormal + ", disease=" + disease
+		return "Result [autoId=" + autoid + ", check=" + check + ", abnormal=" + abnormal + ", disease=" + disease
 				+ ", instruction=" + instruction + ", replenish=" + replenish + ", advice=" + advice
 				+ ", inspectionitem=" + inspectionitem + ", manner=" + manner + ", returndate=" + returndate
 				+ ", creaedata=" + creaedata + ", mid=" + mid + ", sex=" + sex + "]";

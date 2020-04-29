@@ -4,6 +4,7 @@ package com.daji.pojo;
  * 既往病例
  */
 public class Anamnesis {
+
     private Integer autoId;//主键，自增
     private String mid;//受检人编号(外)
     private Integer aid;//anamnesistype既往病例表中有的id（外）

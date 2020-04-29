@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>新建档案</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="/statics/layui/css/layui.css">
+    <link rel="stylesheet" href="/statics/css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="/css/select.css" />
+     <script type="text/javascript" src="/JsAndCss/js/jquery.min.js"></script>
+     <script type="text/javascript" src="/statics/JsAndCss/js/familyName.js"></script>
+    <script type="text/javascript" src="/lay/layui.js"></script>
+     <script type="text/javascript" src="/JsAndCss/js/data.js"></script>
+    <script type="text/javascript" src="/JsAndCss/js/newfile.js"></script>
+    <script type="text/javascript" src="/ljjs/addNewFile.js"></script>
+    <script src="/js/select.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+<div class="layui-container">
+    <form  class="layui-form"  lay-filter="formFilter"  action="">
+        <fieldset class="layui-elem-field">
+            <div class="layui-col-xs6">
+                <div class="layui-form-item ps-top">
+                    <label class="layui-form-label" style="width: 90px">本地档案编号:</label>
+                    <div class="layui-input-block">
+                        <input name="mid" id="mid" lay-verify="required" autocomplete="off" class="layui-input" type="text"
+                               readonly>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-field-box">
+                <div class="layui-row">
+                    <div class="layui-col-md12">
+                        <blockquote class="layui-elem-quote">基本信息</blockquote>
+                    </div>
+                </div>
+                <div class="layui-row layui-col-space10">
+                    <!--男基础信息-->
+                    <div class="layui-col-xs6">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label ps-required-label" for="mname">丈夫姓名:</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="mname" id="mname" required lay-verify="required"
+                                       placeholder="请输入丈夫姓名" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label ps-required-label">民族:</label>
+                            <div class="layui-input-block">
+                                <select lay-verify="required" class="familyName"  name="mnationality" id="mnationality">
+                                   </select>
+                            </div>
+                        </div>
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-xs10">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label ps-required-label">证件类型:</label>
+                                    <div class="layui-input-block">
+                                        <select name="hirpid" id="midCardType" lay-verify="required">
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label ps-required-label" for="midcard">证件号码:</label>
+                            <div class="layui-input-block"> 
+                                <input type="text" name="midcard" id="midCard" required lay-verify="required"
+                                       placeholder="请输入证件号" autocomplete="off" class="layui-input" onblur="midCardJs()">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label ps-required-label" for="mbirthDate">出生日期:</label>
+                            <div class="layui-input-block">
+                                <input type="date" name="mbirthdate" id="mbirthDate" required lay-verify="required"
+                                       autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label ps-required-label" for="mage">年龄:</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="mage" id="mage" required lay-verify="required"
+                                       autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">文化程度:</label>
+                            <div class="layui-input-block">
+                                <select  id="meduLevel" name="hireid" lay-verify="required">
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-xs8">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">职业:</label>
+                                    <div class="layui-input-block">
+                                        <select name="hiroid" id="mjob"lay-verify="required">
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-xs4">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <input type="text" name="mjobothers" id="mjobothers" autocomplete="off"
+                                               class="layui-input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label ps-required-label">户口性质:</label>
+                            <div class="layui-input-block">
+                                <select name="hirrid" id="maccountType">
+                               </select>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label ps-required-label" for="mcellphonenum">手机号码:</label>
+                            <div class="layui-input-block">
+                                <input type="text" id="mcellPhoneNum" name="mcellphonenum" autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label" for="emailn">邮箱:</label>
+                            <div class="layui-input-block">
+                                <input type="email" id="emailN" name="memail" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--女基础信息-->
+                    <div class="layui-col-xs6">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label ps-required-label" for="fname">妻子姓名:</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="fname" id="fname" required lay-verify="required"
+                                       placeholder="请输入妻子姓名" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label ps-required-label">民族:</label>
+                            <div class="layui-input-block">
+                                <select name="fnationality" class="fnationality"  id="fnationality" lay-verify="required">
+                                      </select>
+                            </div>
+                        </div>
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-xs10">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label ps-required-label">证件类型:</label>
+                                    <div class="layui-input-block">
+                                        <select name="herpid"  id="fidCardType" lay-verify="required">
+                                         </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label ps-required-label" for="fidcard">证件号码:</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="fidcard" id="fidCard" required lay-verify="required"
+                                       placeholder="请输入证件号" autocomplete="off" class="layui-input" onBlur="fidCardJs()">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label ps-required-label" for="fbirthdate">出生日期:</label>
+                            <div class="layui-input-block">
+                                <input type="date" name="fbirthdate" id="fbirthDate" required lay-verify="required"
+                                       autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label ps-required-label" for="fage">年龄:</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="fage" id="fage" required lay-verify="required"
+                                       autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">文化程度:</label>
+                            <div class="layui-input-block">
+                                <select name="hereid"  id="feduLevel" lay-verify="required">
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-xs8">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">职业:</label>
+                                    <div class="layui-input-block">
+                                        <select name="heroid" id="fjob" lay-verify="required">
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-xs4">
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <input type="text" name="fjobothers" id="fjobothers" autocomplete="off"
+                                               class="layui-input">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label ps-required-label">户口性质:</label>
+                            <div class="layui-input-block">
+                                <select name="herrid" id="faccountType">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label ps-required-label" for="mcellphonenum">手机号码:</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="fcellphonenum" id="fcellPhoneNum" autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label" for="emailw">邮箱:</label>
+                            <div class="layui-input-block">
+                                <input type="email"  name="femail" id="emailW" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="layui-form-item layui-col-xs6 layui-col-xs-offset2">
+                <label class="layui-form-label">结婚时间:</label>
+                <div class="layui-input-block">
+                    <input class="layui-input" name="mtime" id="mtime">
+                </div>
+            </div>
+            <div class="layui-clear"></div>
+
+
+            <fieldset class="layui-elem-field">
+                <div class="layui-filed-box">
+                    <div class="layui-row">
+                        <blockquote class="layui-elem-quote">妻子现住址</blockquote>
+                    </div>
+                </div>
+                <div class="layui-form-item" id="province3">
+                    <div class="layui-col-xs2">
+                        <div class="layui-inline">
+                            <select name="P1" lay-filter="province" id="province" lay-search>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="layui-col-xs2">
+                        <div class="layui-inline">
+                            <select name="C1" lay-filter="city" id="city" lay-search>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="layui-col-xs2">
+                        <div class="layui-inline">
+                            <select  name="A1" lay-filter="area" id="area" lay-search>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs4">
+                        <div class="layui-input-block ps-my-input">
+                            <input name="addressVillage" id="addressVillage" class="layui-input" type="text" placeholder="请输入详细地址">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="layui-col-xs6">
+                <label class="layui-form-label ps-my-label">登记类型：</label>
+                <div class="layui-input-block">
+                    <select  name="cid" id="K1">
+                        </select>
+                </div>
+            </div>
+
+
+            <div class="layui-form-item">
+                <label class="layui-form-label ps-my-label ps-required-label">医生签名：</label>
+                <div class="layui-input-block">
+                    <input type="text" name="doctorname">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label ps-my-label ps-required-label">知情同意书：</label>
+                <div class="layui-input-block">
+                    <select  name="hid" id="hasContent">
+                       </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label ps-my-label">填写日期：</label>
+                <div class="layui-input-block">
+                    <input class="layui-input" name="servicetime" id="serviceTime" type="date">
+                </div>
+            </div>
+            <div class="layui-form-mid layui-col-xs-10 layui-col-xs-offset2">
+               <input type="submit" class="layui-btn layui-btn-warm layui-btn-my" lay-submit="" lay-filter="demo1"  value="新建">
+                <button class="layui-btn layui-btn-normal layui-btn-my" type="button">读取身份证</button>
+                <button class="layui-btn layui-btn-danger layui-btn-my" type="button" id="preservation" onclick="return check()">保存</button>
+                <button class="layui-btn layui-btn-normal layui-btn-my" type="button" id="lodop">条形码打印</button>
+                <button class="layui-btn layui-btn-normal layui-btn-my" type="button" id="printBasicInfo">打印预览</button>
+<!--                 <a href="head.jsp"><button class="layui-btn layui-btn-normal layui-btn-my" type="button">退出</button></a> -->
+            </div>
+        </fieldset>
+    </form>
+</div>
+</body>
+
+<!-- 条形码打印 -->
+<script type="text/javascript" src="/JsAndCss/js/jquery-1.8.3.min.js"></script>
+ <script type="text/javascript" src="/JsAndCss/js/LodopFuncs.js"></script>
+ <script type="text/javascript" src="/JsAndCss/js/Lodop.js"></script>
+<script type="text/javascript">
+layui.use('laydate', function(){
+  var laydate = layui.laydate;				  
+  //执行一个laydate实例
+  laydate.render({
+    elem: '#mtime' //指定元素
+  });
+  laydate.render({
+    elem: '#mbirthDate'
+  });
+  laydate.render({
+    elem: '#fbirthDate'
+  });
+  laydate.render({
+    elem: '#serviceTime'
+  });			        
+});
+</script>
+
+<script type="text/javascript">
+	$(function(){
+		$("#lodop").click(function(){
+			var id = $("#ID").val();
+			if(id==null || id==" "){
+				alert("请先选择编号");
+			}else{
+				$.ajax({
+					url:"${pageContext.request.contextPath}/lodopPrint.action",
+					data:"id="+id,
+					type:"post",
+					dataType:"json",
+					success:function(data){
+						usPrint(data.LodopJson,data.SetLodop);
+					}
+				})
+			}
+		});
+	});
+</script>
+</html>
