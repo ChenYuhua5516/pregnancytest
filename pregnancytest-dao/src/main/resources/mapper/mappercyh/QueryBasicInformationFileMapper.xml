@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.daji.daocyh.QueryBasicInformationFileMapper">
+
+
+
+    <select id="findQueryBasicInformationFile" resultType="QueryBasicInformationFile" parameterType="QueryBasicInformationFile">
+        SELECT s1.pg,s.* FROM
+        (SELECT c.cid cid,m.autoid autoid, m.`mid` `mid`,m.`fname` fname ,i.`fidCard` `fidCard`,m.`fbirthDate` fbirthDate,m.mname `mname`
+        ,i.`midCard` `midCard`,m.`mbirthDate` mbirthDate,m.`serviceTime` serviceTime,c.`checktype` checktype
+        FROM minfo m , `information` i,`therest` t,checktypeinfo c WHERE m.`mid`=i.`mid` AND m.`mid`=t.`mid` AND t.`cid`=c.`cid` ) s,
+        (SELECT b.mid,b.pg FROM (
+        (SELECT u.mid,2 AS pg FROM minfo u  WHERE u.mid NOT IN (SELECT prove.`mid` `mid` FROM prove GROUP BY prove.`mid` HAVING COUNT(*)=2))
+        UNION ALL
+        (SELECT u.mid,1 AS pg FROM minfo u  WHERE u.mid  IN (SELECT prove.`mid` `mid` FROM prove GROUP BY prove.`mid` HAVING COUNT(*)=2)
+        )) b) s1 WHERE s.mid=s1.mid
+        <if test="pg!=null and pg!=''">
+            AND s1.`pg`=#{pg}
+        </if>
+        <if test="mid!=null and mid!=''">
+        AND s.`mid`=#{mid}
+        </if>
+
+    <if test="beginServiceTime!=null">AND s.`serviceTime`&gt;=#{beginServiceTime}</if>
+<if test="endServiceTime!=null">
+AND s.`serviceTime`&lt;=#{endServiceTime}
+</if>
+<if test="fname!=null and fname!=''">
+AND s.`fname` LIKE concat('%',#{fname},'%')
+</if>
+<if test="fidcard!=null and fidcard!=''">
+AND s.`fidcard`=#{fidcard}
+</if>
+<if test="mname!=null and mname!=''">
+AND s.`mname` LIKE concat('%',#{mname},'%')
+</if>
+<if test="midcard!=null and midcard!=''">
+AND s.`midcard`=#{midcard}
+</if>
+<if test="cid!=null and cid!=0">
+AND s.`cid`=#{cid}
+</if>
+<if test="assess!=null and assess!=0">
+AND ye.`assess`=#{assess}
+</if>
+        limit #{pageNum},#{pageSize}
+    </select>
+
+
+    <select id="findQueryBasicInformationFileSize" resultType="int" parameterType="QueryBasicInformationFile">
+        SELECT count(*) FROM
+        (SELECT c.cid cid,m.autoid autoid, m.`mid` `mid`,m.`fname` fname ,i.`fidCard` `fidCard`,m.`fbirthDate` fbirthDate,m.mname `mname`
+        ,i.`midCard` `midCard`,m.`mbirthDate` mbirthDate,m.`serviceTime` serviceTime,c.`checktype` checktype
+        FROM minfo m , `information` i,`therest` t,checktypeinfo c WHERE m.`mid`=i.`mid` AND m.`mid`=t.`mid` AND t.`cid`=c.`cid` ) s,
+        (SELECT b.mid,b.pg FROM (
+        (SELECT u.mid,2 AS pg FROM minfo u  WHERE u.mid NOT IN (SELECT prove.`mid` `mid` FROM prove GROUP BY prove.`mid` HAVING COUNT(*)=2))
+        UNION ALL
+        (SELECT u.mid,1 AS pg FROM minfo u  WHERE u.mid  IN (SELECT prove.`mid` `mid` FROM prove GROUP BY prove.`mid` HAVING COUNT(*)=2)
+        )) b) s1 WHERE s.mid=s1.mid
+
+        <if test="pg!=null and pg!=''">
+            AND s1.`pg`=#{pg}
+        </if>
+        <if test="mid!=null and mid!=''">
+            AND s.`mid`=#{mid}
+        </if>
+
+        <if test="beginServiceTime!=null">AND s.`serviceTime`&gt;=#{beginServiceTime}</if>
+        <if test="endServiceTime!=null">
+            AND s.`serviceTime`&lt;=#{endServiceTime}
+        </if>
+        <if test="fname!=null and fname!=''">
+            AND s.`fname` LIKE concat('%',#{fname},'%')
+        </if>
+        <if test="fidcard!=null and fidcard!=''">
+            AND s.`fidcard`=#{fidcard}
+        </if>
+        <if test="mname!=null and mname!=''">
+            AND s.`mname` LIKE concat('%',#{mname},'%')
+        </if>
+        <if test="midcard!=null and midcard!=''">
+            AND s.`midcard`=#{midcard}
+        </if>
+        <if test="cid!=null and cid!=0">
+            AND s.`cid`=#{cid}
+        </if>
+        <if test="assess!=null and assess!=0">
+            AND ye.`assess`=#{assess}
+        </if>
+    </select>
+<select id="getMinfoAndInformation" resultType="QueryBasicInformationFile">
+    SELECT m.autoid autoid, m.`mid` `mid`,m.`fname` fname ,i.`fidCard` `fidCard`,m.`fbirthDate` fbirthDate,
+m.mname `mname` ,m.`mbirthDate` mbirthDate,m.`serviceTime` serviceTime,m.`mcellPhoneNum` mcellPhoneNum
+FROM minfo m , `information` i WHERE m.`mid`=i.`mid` AND m.`mid` NOT in (SELECT c.mid FROM complete c
+<where>
+    <if test="typeid!=null and typeid!=0">
+        AND c.`typeid`=#{typeid}
+    </if>
+    <if test="sex!=null and sex!=0">
+        AND c.`sex`=#{sex}
+    </if>
+
+</where>
+    )
+    <if test="endServiceTime!=null">
+        AND m.`serviceTime`&lt;=#{endServiceTime}
+    </if>
+
+    <if test="beginServiceTime!=null">AND m.`serviceTime`&gt;=#{beginServiceTime}</if>
+    limit #{pageNum},#{pageSize}
+</select>
+
+    <select id="getMinfoAndInformationSize" resultType="int">
+        SELECT count(*)
+        FROM minfo m , `information` i WHERE m.`mid`=i.`mid` AND m.`mid` NOT in (SELECT c.mid FROM complete c
+        <where>
+        <if test="typeid!=null and typeid!=0">
+            AND c.`typeid`=#{typeid}
+        </if>
+        <if test="sex!=null and sex!=0">
+            AND c.`sex`=#{sex}
+        </if>
+        </where>
+        )
+        <if test="endServiceTime!=null">
+            AND m.`serviceTime`&lt;=#{endServiceTime}
+        </if>
+
+        <if test="beginServiceTime!=null">AND m.`serviceTime`&gt;=#{beginServiceTime}</if>
+    </select>
+
+
+
+    <select id="getMinfoAndTherestAndInformation" resultType="QueryBasicInformationFile">
+        SELECT m.mid mid ,m.fname fname,i.fidcard fidcard,m.fage fage,m.fbirthdate fbirthdate,t.address address,m.fcellphonenum fcellphonenum FROM minfo m,information i,therest t, result r
+        WHERE  m.`mid`=i.`mid` AND m.`mid`=t.`mid` AND t.`mid`=i.`mid` AND r.`mid`=m.`mid`
+        <if test="ty==1">
+            and r.mid in (SELECT t.mid FROM result t WHERE t.check=#{check}  GROUP BY t.`mid` HAVING COUNT(*)=2)  and r.sex=1
+        </if>
+        <if test="ty==2">
+            <if test="check!=null and check!=0">
+                and r.`check`=#{check}
+            </if>
+            <if test="sex!=null and sex!=0">
+                and r.sex=#{sex}
+            </if>
+        </if>
+
+        <if test="endServiceTime!=null">
+            AND m.`serviceTime`&lt;=#{endServiceTime}
+        </if>
+
+        <if test="beginServiceTime!=null">AND m.`serviceTime`&gt;=#{beginServiceTime}</if>
+        <if test="fname!=null and fname!=''">
+            AND m.`fname` LIKE concat('%',#{fname},'%')
+        </if>
+        <if test="fidcard!=null and fidcard!=''">
+            AND i.`fidcard`=#{fidcard}
+        </if>
+        limit #{pageNum},#{pageSize}
+
+    </select>
+    <select id="getMinfoAndTherestAndInformationSize" resultType="int">
+        SELECT count(*) FROM minfo m,information i,therest t, result r
+        WHERE  m.`mid`=i.`mid` AND m.`mid`=t.`mid` AND t.`mid`=i.`mid` AND r.`mid`=m.`mid`
+        <if test="ty==1">
+        and r.mid in (SELECT t.mid FROM result t WHERE t.check=#{check}  GROUP BY t.`mid` HAVING COUNT(*)=2) and r.sex=1
+        </if>
+        <if test="ty==1">
+            and r.mid in (SELECT t.mid FROM result t GROUP BY t.`mid` HAVING COUNT(*)=2) and r.sex=1
+        </if>
+        <if test="ty==2">
+            <if test="check!=null and check!=0">
+                and r.`check`=#{check}
+            </if>
+            <if test="sex!=null and sex!=0">
+                and r.sex=#{sex}
+            </if>
+        </if>
+
+        <if test="endServiceTime!=null">
+            AND m.`serviceTime`&lt;=#{endServiceTime}
+        </if>
+
+        <if test="beginServiceTime!=null">AND m.`serviceTime`&gt;=#{beginServiceTime}</if>
+        <if test="fname!=null and fname!=''">
+            AND m.`fname` LIKE concat('%',#{fname},'%')
+        </if>
+        <if test="fidcard!=null and fidcard!=''">
+            AND i.`fidcard`=#{fidcard}
+        </if>
+
+    </select>
+</mapper>

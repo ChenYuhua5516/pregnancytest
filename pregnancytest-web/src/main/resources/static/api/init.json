@@ -23,13 +23,13 @@
           "child": [
             {
               "title": "基础档案信息",
-              "href": "QueryBasicInformationFile.html",
+              "href": "QueryBasicInformationFile",
               "icon": "fa fa-tachometer",
               "target": "_self"
             },
             {
               "title": "未填信息查询",
-              "href": "Unfilledquery1.html",
+              "href": "Unfilledquery1",
               "icon": "fa fa-tachometer",
               "target": "_self"
             }
@@ -43,7 +43,7 @@
           "child": [
             {
               "title": "新建档案",
-              "href": "addNewFilecx",
+              "href": "addNewFile",
               "icon": "fa fa-list-alt",
               "target": "_self"
             }
@@ -65,19 +65,19 @@
           "child": [
             {
               "title": "自定义短信随访",
-              "href": "zdydxsf.html",
+              "href": "zdydxsf",
               "icon": "fa fa-dot-circle-o",
               "target": "_self"
             },
             {
               "title": "评估建议短信随访",
-              "href": "pgjydxsf.html",
+              "href": "pgjydxsf",
               "icon": "fa fa-adn",
               "target": "_self"
             },
             {
               "title": "已发短信统计表",
-              "href": "SMSStatisticsTable.html",
+              "href": "SMSStatisticsTable",
               "icon": "fa fa-adn",
               "target": "_self"
             }
@@ -113,7 +113,7 @@
             },
             {
               "title": "新增B超检查",
-              "href": "addBmodl.html?v=1",
+              "href": "addBmodl",
               "icon": "fa fa-calendar",
               "target": "_self"
             }

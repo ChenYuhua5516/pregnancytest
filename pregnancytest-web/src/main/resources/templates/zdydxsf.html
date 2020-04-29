@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义短信</title>
+			<style>
+			/*
+			  * 外面盒子样式---自己定义
+			  */
+			
+			.page_div {
+				margin-top: 20px;
+				margin-bottom: 20px;
+				font-size: 15px;
+				font-family: "microsoft yahei";
+				color: #666666;
+				margin-right: 10px;
+				padding-left: 20px;
+				box-sizing: border-box;
+			}
+			/*
+			 * 页数按钮样式
+			 */
+			
+			.page_div a {
+				min-width: 30px;
+				height: 28px;
+				border: 1px solid #dce0e0!important;
+				text-align: center;
+				margin: 0 4px;
+				cursor: pointer;
+				line-height: 28px;
+				color: #666666;
+				font-size: 13px;
+				display: inline-block;
+			}
+			
+			#firstPage,
+			#lastPage {
+				width: 50px;
+				color: #0073A9;
+				border: 1px solid #0073A9!important;
+			}
+			
+			#prePage,
+			#nextPage {
+				width: 70px;
+				color: #0073A9;
+				border: 1px solid #0073A9!important;
+			}
+			
+			.page_div .current {
+				background-color: #0073A9;
+				border-color: #0073A9;
+				color: #FFFFFF;
+			}
+			
+			.totalPages {
+				margin: 0 10px;
+			}
+			
+			.totalPages span,
+			.totalSize span {
+				color: #0073A9;
+				margin: 0 5px;
+			}
+			#xiala{
+				position: absolute;
+				top:176px;
+				left:100px;
+			}
+		</style>
+	</head>
+	<link rel="stylesheet" href="/statics/layui/css/layui.css">
+	<script type="text/javascript" src="/statics/layui/layui.js"></script>
+	<link rel="stylesheet" type="text/css" href="/JsAndCss/bootstrap/css/bootstrap.css"/>
+	<script type="text/javascript" src="/JsAndCss/js/jquery.min.js" ></script>
+	<script type="text/javascript" src="/JsAndCss/bootstrap/js/bootstrap.min.js" ></script>
+
+	<script type="text/javascript" src="/cyhjs/zdydxsf.js" ></script>
+	<script type="text/javascript">
+	//查询短信模板内容
+	 $(function(){
+		 $.post("${pageContext.request.contextPath}/smTemplates.action",{},function(data){
+			 var str=JSON.parse(data);
+			for (var i = 0; i < str.length; i++) {
+				$("#xiala").append("<option value='"+str[i].neiRong+"'>"+str[i].neiRong+"</option> ");
+			}
+			})
+	 });
+	 layui.use('laydate', function(){
+		  var laydate = layui.laydate;
+		  //执行一个laydate实例
+		  laydate.render({
+		    elem: '#beginServiceTime' //指定元素
+		  });
+		});
+	 layui.use('laydate', function(){
+		  var laydate = layui.laydate;
+		  //执行一个laydate实例
+		  laydate.render({
+		    elem: '#endServiceTime' //指定元素
+		  });
+		});
+	//查询内容
+	/*function cx(){
+		var dangrObj = $("#fx").val();
+		var fname=$("#fname").val();
+		var js=$("#js").val();
+		var qs=$("#qs").val();
+		var fidCard=$("#fidCard").val();
+		$.post("${pageContext.request.contextPath}/noteyonhu.action",{
+			fname:fname,fidCard:fidCard,js:js,qs:qs,dangrObj:dangrObj,curPage:1
+		},function(data){
+			$(".w").remove();
+			var str =eval("("+data+")");
+        	for (var i = 0; i < str.pageData.length; i++) {
+    		$("#tr1").append("<tr class='w'><td class='sid'>"+str.pageData[i].iD+"</td><td class='name'>"+str.pageData[i].fname+"</td><td class='id'>"+str.pageData[i].fidCard+"</td><td class='age'>"+str.pageData[i].fage+"</td><td class='date'>"+str.pageData[i].fbirthDate+"</td><td class='addr'>"+str.pageData[i].maddress+"</td><td class='phone'>"+str.pageData[i].fcellPhoneNum+"</td></tr>");
+        	}
+    		$("#page").paging({
+				pageNo:str.curPage,
+				totalPage: str.totalPages,
+				totalSize: str.totalRecords,
+				callback: function(num) {
+					$.post("${pageContext.request.contextPath}/noteyonhu.action",{
+						fname:fname,fidCard:fidCard,js:js,qs:qs,dangrObj:dangrObj,curPage:num
+							},function(data){
+			            		$(".w").remove();
+			            		var str =eval("("+data+")");
+			                	for(var i = 0; i < str.pageData.length; i++) {
+			            		$("#tr1").append("<tr class='w'><td class='sid'>"+str.pageData[i].iD+"</td><td class='name'>"+str.pageData[i].fname+"</td><td class='id'>"+str.pageData[i].fidCard+"</td><td class='age'>"+str.pageData[i].fage+"</td><td class='date'>"+str.pageData[i].fbirthDate+"</td><td class='addr'>"+str.pageData[i].maddress+"</td><td class='phone'>"+str.pageData[i].fcellPhoneNum+"</td></tr>");
+			            		}
+							}
+			            )
+				}
+			})
+     		})
+     		
+	}
+	//发送短信
+	 	var arr = new Array();  
+	 function fason(){
+		 var dangrObj = $("#fx").val();
+		var fidCard=$("#fname").val();
+		var js=$("#js").val();
+		var qs=$("#qs").val();
+		var fname=$("#fidCard").val();
+		var duanxrn = $("#tbUnit").val();
+		$.post("${pageContext.request.contextPath}/notefason.action",{
+			fname:fname,fidCard:fidCard,js:js,qs:qs,dangrObj:dangrObj
+		},function(data){
+			$.post("${pageContext.request.contextPath}/fason.action",{duanxrn:duanxrn},function(data){
+				if(data == "true"){
+					alert("发送成功");
+					
+				}else{
+					alert("发送失败");
+				}
+			})
+        	
+		})
+		}*/
+		
+			//var duanxrn = $("#duanxrn").val();
+			//var sjhm = $("#formGroupInputSmall0").val();
+			/**
+			var str =eval("("+data+")");
+			alert(str.length);
+        	for (var i = 0; i < str.length; i++) {
+        		arr[i] =  str[i].fcellPhoneNum;
+        		alert(arr[i]);
+			
+			$.post("${pageContext.request.contextPath}/fason.action",{duanxrn:duanxrn,sjhm:sjhm},function(data){
+					if(data == "true"){
+						alert("发送成功");
+						
+					}else{
+						alert("发送失败"); 
+					}
+				})**/
+			
+	//alert(data.endPage);
+	//for (var i = 0; i < data.str.length; i++) {
+	//	alert(data.str[i].endPage);
+	//}
+		</script>
+	<body style="position: relative;">
+	
+	<center>
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			  		<table class="table" border="0" cellspacing="" cellpadding="">
+				  			<tr>
+
+				  				<td colspan="4"><div class="input-group" style="width: 100%;">
+  <span class="input-group-addon" id="basic-addon1">妻子名字： </span>
+  <input type="text" class="form-control" placeholder="请输入名字" aria-describedby="basic-addon1" id="fname">
+</div></td>
+								<td colspan="4"><div class="input-group" style="width:100%;">
+  <span class="input-group-addon" id="basic-addon1">身份证号码： </span>
+  <input type="text" class="form-control" placeholder="请输入号码" aria-describedby="basic-addon1" id="fidcard">
+</div></td>
+								<td colspan="4"><div class="input-group" style="width:100%;">
+									<span class="input-group-addon" id="basic-addon1">风险类型： </span>
+									<select class="form-control" aria-describedby="basic-addon1" id="check">
+										<option value="">--请选择--</option>
+										<option value="4" >无风险</option>
+										<option value="1" >女方有风险</option>
+										<option value="2" >男方有风险</option>
+										<option value="3" >双方有风险</option>
+									</select>
+								</div></td>
+				  			</tr>
+				  			<tr>
+				  				<td colspan="4"><div class="input-group" style="width:100%;">
+  <span class="input-group-addon" id="basic-addon1">创建时间  从： </span>
+  <input type="text" class="layui-input" placeholder="请输入" aria-describedby="basic-addon1" id="beginServiceTime">
+</div>
+				  				</td>
+								<td colspan="4"><div class="input-group" style="width: 100%;"><span class="input-group-addon"id="basic-addon1">至： </span><input type="text" class="layui-input" placeholder="请输入" aria-describedby="basic-addon1" id="endServiceTime">
+				  			</div> 
+				  				</td>
+
+				  				<td>
+									<button type="button" id="bth" class="btn btn-info">查询</button>
+					  				<!-- <a href=""><button type="button" class="btn btn-warning">导出</button></a> -->
+					  				<!-- <a href=""><button type="button" class="btn btn-danger">返回</button></a> -->
+				  				</td>
+				  			</tr>
+				  		</table>
+			  </div>
+			</div>
+			</center>
+					<!-- 2 -->
+				<div class="panel panel-default">
+				  <div class="panel-heading">
+				  	<table  border="0" cellspacing="" cellpadding="">
+				  		<tr>
+				  			<th>短信内容：</th>
+				  			<td>
+				  			<textarea name="" id="tbUnit" style="width:300px;" placeholder="请输入短信内容"></textarea>
+				<!-- <select onchange="document.getElementById('tbUnit').value=this.options[this.selectedIndex].value" style="width:300px;clip: rect(auto auto auto 280px);" id = "xiala">
+    				 <option value="" name="option"></option>  
+   					  
+				</select> -->
+				  			</td>
+				  			
+				  			<td><button type="button" class="btn btn-info" style="margin-left: 20px;" id="sendduanxin">发送短信</button></td>
+				  		</tr>
+				  	</table>
+				  </div>
+				</div>
+				
+				<div class="panel panel-info">
+				  <!-- Default panel contents -->
+				  <div class="panel-heading">自定义短信随访</div>
+				  <!-- Table -->
+					<table class="layui-hide" id="test"  lay-filter="test" width="100%"></table>
+				</div>
+				<div value="1 0"></div>
+						<div id="page" class="page_div"></div>
+	<script type="text/html" id="toolbarDemo">
+		<div class="layui-btn-container">
+			<button class="layui-btn layui-btn-sm" lay-event="getCheckData">获取选中行数据</button>
+			<button class="layui-btn layui-btn-sm" lay-event="getCheckLength">获取选中数目</button>
+			<button class="layui-btn layui-btn-sm" lay-event="isAll">验证是否全选</button>
+		</div>
+	</script>
+	</body>
+</html>

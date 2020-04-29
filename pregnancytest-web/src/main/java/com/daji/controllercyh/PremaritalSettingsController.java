@@ -1,12 +1,9 @@
 package com.daji.controllercyh;
 
 import com.daji.pojo.Labwork;
-import com.daji.pojo.Minfo;
 import com.daji.servicecyh.LabworkService;
-import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
@@ -45,7 +42,7 @@ public class PremaritalSettingsController {
     }
 
     @RequestMapping(value="/addLabwork",produces="application/json;charset=utf-8")
-    public String addLabwork(Labwork labwork,HttpSession session){
+    public String addLabwork(Labwork labwork, HttpSession session){
           /*  Minfo minfo= (Minfo) session.getAttribute("minfo");
       */
         labwork.setMid("2020011000001");
@@ -54,7 +51,7 @@ public class PremaritalSettingsController {
     }
 
     @RequestMapping(value="/updateLabworkById",produces="application/json;charset=utf-8")
-    public String updateLabworkBymidAndSex(Labwork labwork,HttpSession session){
+    public String updateLabworkBymidAndSex(Labwork labwork, HttpSession session){
         /*  Minfo minfo= (Minfo) session.getAttribute("minfo");
          */
         labwork.setMid("2020011000001");

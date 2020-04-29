@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>基础信息查询</title>
+    <style type="text/css">
+        .tr_color{
+            color: red;
+        }
+    </style>
+</head>
+	<link rel="stylesheet" href="/JsAndCss/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/JsAndCss/css/paging.css" />
+	<script type="text/javascript" src="/JsAndCss/js/jquery.min.js" ></script>
+	<script type="text/javascript" src="/JsAndCss/js/jquery.contextify.js"></script>
+	<link rel="stylesheet" href="/statics/layui/css/layui.css">
+	<script type="text/javascript"  src="/lay/layui.js"></script>
+
+<script src="/cyhjs/QueryBasicInformationFile.js"></script>
+<script type="text/javascript" src="/JsAndCss/js/paging.js"></script>
+<body>
+	<div class="container">
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">查询条件</h3>
+			</div>
+
+			<div class="panel-body">
+				<form action="" role="form">
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-4 col-sm-4">
+								<div class="input-group">
+									<span class="input-group-addon">档案编号</span> <input
+										class="form-control" id="mid" name="AutoID" type="text">
+								</div>
+							</div>
+							<div class="col-xs-4 col-sm-4">
+								<div class="input-group">
+									<span class="input-group-addon">建档开始时间</span> <input
+										id="beginServiceTime" class="form-control" type="text">
+								</div>
+							</div>
+							<div class="col-xs-4 col-sm-4">
+								<div class="input-group">
+									<span class="input-group-addon">建档结束时间</span> <input
+										id="endServiceTime" class="form-control" type="text">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-3 col-sm-3">
+								<div class="input-group">
+									<span class="input-group-addon">妻子姓名</span> <input
+										class="form-control" id="fname" name="AutoID" type="text">
+								</div>
+							</div>
+							<div class="col-xs-3 col-sm-3">
+								<div class="input-group">
+									<span class="input-group-addon">妻子证件号码</span> <input
+										class="form-control" id="fidcard" name="AutoID" type="text">
+								</div>
+							</div>
+							<div class="col-xs-3 col-sm-3">
+								<div class="input-group">
+									<span class="input-group-addon">丈夫姓名</span> <input
+										class="form-control" id="mname" name="AutoID" type="text">
+								</div>
+							</div>
+							<div class="col-xs-3 col-sm-3">
+								<div class="input-group">
+									<span class="input-group-addon">丈夫证件号码</span> <input
+										class="form-control" id="midcard" name="AutoID" type="text">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-4 col-sm-4">
+								<div class="input-group">
+									<span class="input-group-addon">评估状态</span> <select id="pg"
+										class="form-control">
+										<option value="0">请选择</option>
+										<option value="1">已评估</option>
+										<option value="2">未评估</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-xs-4 col-sm-4">
+								<div class="input-group">
+									<span class="input-group-addon">检验状态</span> <select
+										id="jianyan" class="form-control">
+										<option value="">请选择</option>
+										<option value="1">已完成</option>
+										<option value="2">未完成</option>
+									</select>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-xs-4 col-sm-4">
+								<div class="input-group">
+									<span class="input-group-addon">登记类型</span> <select id="cid"
+										class="form-control">
+
+									</select>
+								</div>
+							</div>
+							<div class="col-xs-8 col-sm-8">
+								<button type="button" onclick="duqu();" class="btn btn-info">读取身份证</button>
+								<button type="button" id="bth" class="btn btn-info">查询</button>
+								<button type="button" onclick="funClear()" class="btn btn-info">清空查询条件</button>
+								<button type="button" onclick="funClearResult()" class="btn btn-info">清空结果信息</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+		<!-- 数据 -->
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">数据结果</h3>
+			</div>
+			<div class="panel-body" style="overflow: auto;width: 100%">
+				<table class="layui-hide" id="test"  lay-filter="test" width="100%"></table>
+
+					
+			</div>
+			<div id="page" class="page_div"></div>
+					</div>
+		</div>
+	<script type="text/html" id="barDemo">
+		<a class="layui-btn layui-btn-xs" lay-event="edit">基础信息登记</a>
+		<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+	</script>
+	<script type="text/html" id="toolbarDemo">
+		<div class="layui-btn-container">
+			<button class="layui-btn layui-btn-sm" lay-event="add">选中行基础信息登记</button>
+			<button class="layui-btn layui-btn-sm" lay-event="beachDelete">删除</button>
+		</div>
+	</script>
+	</body>
+<script type="text/javascript">
+	layui.use('laydate', function() {
+			var laydate = layui.laydate;
+				//执行一个laydate实例
+				laydate.render({
+					elem : '#beginServiceTime' //指定元素
+				});
+				laydate.render({
+					elem : '#endServiceTime' //指定元素
+				});
+	});
+
+
+
+</script>
+
+					</html>

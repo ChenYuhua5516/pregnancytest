@@ -1,13 +1,21 @@
 package com.daji.pojo;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
 
 /**
  * note短信表
  */
 public class Note {
-    private Integer autoId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    private Integer autoid;
+    @Column(name = "`mid`")
     private String mid;//受检人编号(外)女
+    private String phone;
 
     private String message;//note短信信息
 
@@ -15,6 +23,14 @@ public class Note {
 
     private Integer source;//短信来源：1：医生发给受检人 2：受检人回复医生
     private Date sendtime;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public Date getSendtime() {
         return sendtime;
@@ -24,12 +40,12 @@ public class Note {
         this.sendtime = sendtime;
     }
 
-    public Integer getAutoId() {
-        return autoId;
+    public Integer getAutoid() {
+        return autoid;
     }
 
-    public void setAutoId(Integer autoId) {
-        this.autoId = autoId;
+    public void setAutoid(Integer autoid) {
+        this.autoid = autoid;
     }
 
     public String getMid() {

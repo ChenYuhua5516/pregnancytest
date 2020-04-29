@@ -1,6 +1,5 @@
 package com.daji.serviceImpllj;
 
-import com.daji.daocyh.LabworkMapper;
 import com.daji.daolj.LabworkLjMapper;
 import com.daji.pojo.Labwork;
 import com.daji.servicelj.LabworkServiceLJ;

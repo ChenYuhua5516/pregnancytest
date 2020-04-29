@@ -1,10 +1,12 @@
 com\daji\daolj\ChecktypeinfoMaperLJ.class
 com\daji\daolj\HasContentinfoMapperLJ.class
 com\daji\daolj\Koqiang.class
+com\daji\daocyh\NoteCyhMapper.class
 com\daji\daolj\MinfoMapperLJ.class
 com\daji\daolj\TherestMapperLJ.class
 com\daji\daolj\InformationMapperLJ.class
 com\daji\daozxz\Zxz.class
+com\daji\daocyh\ChecktypeinfoCyhMapper.class
 com\daji\daolj\EducationinfoMapperLJ.class
 com\daji\daolj\ResulttypeMapperLJ.class
 com\daji\daocyh\LabworkMapper.class
@@ -17,8 +19,11 @@ com\daji\daolj\UserMapperLJ.class
 com\daji\daocyh\Cyh.class
 com\daji\daozxz\ZxzXrayMapper.class
 com\daji\daolj\OccupationinfoMapperLJ.class
+com\daji\daocyh\BmodlCyhMapper.class
 com\daji\daolj\LabworkLjMapper.class
+com\daji\daocyh\QueryBasicInformationFileMapper.class
 com\daji\daolj\RegisteredinfoMapperLJ.class
 com\daji\daolj\SuggestinfoMapperLJ.class
+com\daji\daocyh\CompleteCyhMapper.class
 com\daji\daolj\ProveMapperLJ.class
 com\daji\daolj\ResultMapperLJ.class
